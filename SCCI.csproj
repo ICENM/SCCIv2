@@ -1,0 +1,613 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1FC1A6E7-25DF-46A8-8067-F6AB46BAB49E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SCCI</RootNamespace>
+    <AssemblyName>SCCI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.26.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumnos.designer.cs">
+      <DependentUpon>Alumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlumnosAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlumnosAM.designer.cs">
+      <DependentUpon>AlumnosAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AsignaturasAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignaturasAM.designer.cs">
+      <DependentUpon>AsignaturasAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AsignaturasP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignaturasP.Designer.cs">
+      <DependentUpon>AsignaturasP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BarriosAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BarriosAM.designer.cs">
+      <DependentUpon>BarriosAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BarriosP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BarriosP.designer.cs">
+      <DependentUpon>BarriosP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Carreras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Carreras.designer.cs">
+      <DependentUpon>Carreras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarrerasAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarrerasAM.designer.cs">
+      <DependentUpon>CarrerasAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datos_SCCI.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datos_SCCI.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DepartamentosAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartamentosAM.designer.cs">
+      <DependentUpon>DepartamentosAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepartamentosP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartamentosP.designer.cs">
+      <DependentUpon>DepartamentosP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocentesAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocentesAM.designer.cs">
+      <DependentUpon>DocentesAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocentesP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocentesP.designer.cs">
+      <DependentUpon>DocentesP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Evaluacion_AM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evaluacion_AM.designer.cs">
+      <DependentUpon>Evaluacion_AM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Evaluacion_P.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evaluacion_P.designer.cs">
+      <DependentUpon>Evaluacion_P.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grados_AM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grados_AM.designer.cs">
+      <DependentUpon>Grados_AM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grados_P.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grados_P.designer.cs">
+      <DependentUpon>Grados_P.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jornadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jornadas.designer.cs">
+      <DependentUpon>Jornadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JornadasAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JornadasAM.designer.cs">
+      <DependentUpon>JornadasAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metodos.cs" />
+    <Compile Include="MunicipiosAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MunicipiosAM.designer.cs">
+      <DependentUpon>MunicipiosAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MunicipiosP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MunicipiosP.designer.cs">
+      <DependentUpon>MunicipiosP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NacionalidadesAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NacionalidadesAM.designer.cs">
+      <DependentUpon>NacionalidadesAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NacionalidadesP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NacionalidadesP.designer.cs">
+      <DependentUpon>NacionalidadesP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotaPAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotaPAM.designer.cs">
+      <DependentUpon>NotaPAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotaPP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotaPP.designer.cs">
+      <DependentUpon>NotaPP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotaSAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotaSAM.designer.cs">
+      <DependentUpon>NotaSAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotaSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotaSP.designer.cs">
+      <DependentUpon>NotaSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Padre_Encargado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Padre_Encargado.designer.cs">
+      <DependentUpon>Padre_Encargado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Padre_EncargadoAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Padre_EncargadoAM.designer.cs">
+      <DependentUpon>Padre_EncargadoAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil_AlumnoP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perfil_AlumnoP.designer.cs">
+      <DependentUpon>Perfil_AlumnoP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Perfl_AlumnoAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perfl_AlumnoAM.designer.cs">
+      <DependentUpon>Perfl_AlumnoAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Periodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Periodos.designer.cs">
+      <DependentUpon>Periodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodosAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeriodosAM.designer.cs">
+      <DependentUpon>PeriodosAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rep_Individual_Barrios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rep_Individual_Barrios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_Individual_Departamentos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rep_Individual_Departamentos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_Individual_Nacionalidades.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rep_Individual_Nacionalidades.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_Ind_Alumnos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rep_Ind_Alumnos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_Ind_Carreras.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rep_Ind_Carreras.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_Ind_Docentes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rep_Ind_Docentes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_Ind_Evaluacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rep_Ind_Evaluacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_Ind_Grados.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rep_Ind_Grados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_Ind_Jornadas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rep_Ind_Jornadas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_Ind_NotaP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rep_Ind_NotaP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_Ind_NotaS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rep_Ind_NotaS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_Ind_Padre_Encargado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rep_Ind_Padre_Encargado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_Ind_Perfil.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rep_Ind_Perfil.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_Ind_Periodos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rep_Ind_Periodos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_Ind_Secciones.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rep_Ind_Secciones.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_Ind_Usuarios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rep_Ind_Usuarios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Secciones_AM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secciones_AM.designer.cs">
+      <DependentUpon>Secciones_AM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secciones_P.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secciones_P.designer.cs">
+      <DependentUpon>Secciones_P.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsuariosAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuariosAM.designer.cs">
+      <DependentUpon>UsuariosAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsuariosP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuariosP.designer.cs">
+      <DependentUpon>UsuariosP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visor_Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visor_Reportes.Designer.cs">
+      <DependentUpon>Visor_Reportes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Alumnos.resx">
+      <DependentUpon>Alumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlumnosAM.resx">
+      <DependentUpon>AlumnosAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsignaturasAM.resx">
+      <DependentUpon>AsignaturasAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BarriosAM.resx">
+      <DependentUpon>BarriosAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BarriosP.resx">
+      <DependentUpon>BarriosP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Carreras.resx">
+      <DependentUpon>Carreras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarrerasAM.resx">
+      <DependentUpon>CarrerasAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartamentosAM.resx">
+      <DependentUpon>DepartamentosAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartamentosP.resx">
+      <DependentUpon>DepartamentosP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocentesAM.resx">
+      <DependentUpon>DocentesAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocentesP.resx">
+      <DependentUpon>DocentesP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evaluacion_AM.resx">
+      <DependentUpon>Evaluacion_AM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evaluacion_P.resx">
+      <DependentUpon>Evaluacion_P.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grados_AM.resx">
+      <DependentUpon>Grados_AM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grados_P.resx">
+      <DependentUpon>Grados_P.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jornadas.resx">
+      <DependentUpon>Jornadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JornadasAM.resx">
+      <DependentUpon>JornadasAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MunicipiosAM.resx">
+      <DependentUpon>MunicipiosAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MunicipiosP.resx">
+      <DependentUpon>MunicipiosP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NacionalidadesAM.resx">
+      <DependentUpon>NacionalidadesAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NacionalidadesP.resx">
+      <DependentUpon>NacionalidadesP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotaPAM.resx">
+      <DependentUpon>NotaPAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotaPP.resx">
+      <DependentUpon>NotaPP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotaSAM.resx">
+      <DependentUpon>NotaSAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotaSP.resx">
+      <DependentUpon>NotaSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Padre_Encargado.resx">
+      <DependentUpon>Padre_Encargado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Padre_EncargadoAM.resx">
+      <DependentUpon>Padre_EncargadoAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Perfil_AlumnoP.resx">
+      <DependentUpon>Perfil_AlumnoP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Perfl_AlumnoAM.resx">
+      <DependentUpon>Perfl_AlumnoAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Periodos.resx">
+      <DependentUpon>Periodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeriodosAM.resx">
+      <DependentUpon>PeriodosAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Rep_Individual_Barrios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rep_Individual_Barrios.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_Individual_Departamentos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rep_Individual_Departamentos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_Individual_Nacionalidades.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rep_Individual_Nacionalidades.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_Ind_Alumnos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rep_Ind_Alumnos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_Ind_Carreras.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rep_Ind_Carreras.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_Ind_Docentes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rep_Ind_Docentes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_Ind_Evaluacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rep_Ind_Evaluacion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_Ind_Grados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rep_Ind_Grados.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_Ind_Jornadas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rep_Ind_Jornadas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_Ind_NotaP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rep_Ind_NotaP.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_Ind_NotaS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rep_Ind_NotaS.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_Ind_Padre_Encargado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rep_Ind_Padre_Encargado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_Ind_Perfil.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rep_Ind_Perfil.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_Ind_Periodos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rep_Ind_Periodos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_Ind_Secciones.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rep_Ind_Secciones.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_Ind_Usuarios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rep_Ind_Usuarios.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secciones_AM.resx">
+      <DependentUpon>Secciones_AM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secciones_P.resx">
+      <DependentUpon>Secciones_P.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuariosAM.resx">
+      <DependentUpon>UsuariosAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuariosP.resx">
+      <DependentUpon>UsuariosP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visor_Reportes.resx">
+      <DependentUpon>Visor_Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Datos_SCCI.xsc">
+      <DependentUpon>Datos_SCCI.xsd</DependentUpon>
+    </None>
+    <None Include="Datos_SCCI.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Datos_SCCI.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datos_SCCI.xss">
+      <DependentUpon>Datos_SCCI.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
