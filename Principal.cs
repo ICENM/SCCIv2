@@ -16,5 +16,14 @@ namespace SCCI
         {
             InitializeComponent();
         }
+
+        private void docentesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Rep_Gen_Docentes Rep = new Rep_Gen_Docentes();
+
+            string SQL = "SELECT * FROM Vista_Docentes";
+
+            Metodos.Imprimir_Reporte(SQL, "Docentes_General", Rep);
+        }
     }
 }
