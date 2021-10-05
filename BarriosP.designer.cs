@@ -29,146 +29,35 @@ namespace SCCI
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.Nacionalidad = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.cmdSalir = new System.Windows.Forms.Button();
             this.cmdImprimir = new System.Windows.Forms.Button();
             this.cmdExportar = new System.Windows.Forms.Button();
             this.cmdEliminar = new System.Windows.Forms.Button();
             this.cmdModificar = new System.Windows.Forms.Button();
             this.cmdNuevo = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gridBarrios = new System.Windows.Forms.DataGridView();
+            this.gpbOrdenar = new System.Windows.Forms.GroupBox();
+            this.RbOrdenarFech_Reg = new System.Windows.Forms.RadioButton();
+            this.RbOrdenarBarrios = new System.Windows.Forms.RadioButton();
+            this.gpbBuscar = new System.Windows.Forms.GroupBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.rbFech_Reg = new System.Windows.Forms.RadioButton();
+            this.rbBarrios = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.gridBarrios)).BeginInit();
+            this.gpbOrdenar.SuspendLayout();
+            this.gpbBuscar.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 157);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(728, 212);
-            this.dataGridView1.TabIndex = 30;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Controls.Add(this.radioButton4);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(465, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(275, 139);
-            this.groupBox2.TabIndex = 29;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Ordenar";
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(16, 90);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(159, 21);
-            this.radioButton3.TabIndex = 1;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Fecha de Registro";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(16, 28);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(70, 21);
-            this.radioButton4.TabIndex = 0;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Barrio";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.Nacionalidad);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(434, 139);
-            this.groupBox1.TabIndex = 28;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Buscar";
-            // 
-            // button1
-            // 
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::SCCI.Properties.Resources.Buscar;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(270, 67);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 40);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Buscar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(120, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(278, 23);
-            this.textBox1.TabIndex = 2;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(16, 90);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(159, 21);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Fecha de Registro";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // Nacionalidad
-            // 
-            this.Nacionalidad.AutoSize = true;
-            this.Nacionalidad.Location = new System.Drawing.Point(16, 28);
-            this.Nacionalidad.Name = "Nacionalidad";
-            this.Nacionalidad.Size = new System.Drawing.Size(70, 21);
-            this.Nacionalidad.TabIndex = 0;
-            this.Nacionalidad.TabStop = true;
-            this.Nacionalidad.Text = "Barrio";
-            this.Nacionalidad.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(446, 99);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 17);
-            this.label1.TabIndex = 27;
             // 
             // cmdSalir
             // 
             this.cmdSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdSalir.Image = global::SCCI.Properties.Resources.exit;
             this.cmdSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdSalir.Location = new System.Drawing.Point(613, 385);
+            this.cmdSalir.Location = new System.Drawing.Point(613, 383);
             this.cmdSalir.Name = "cmdSalir";
             this.cmdSalir.Size = new System.Drawing.Size(111, 38);
-            this.cmdSalir.TabIndex = 36;
+            this.cmdSalir.TabIndex = 26;
             this.cmdSalir.Text = "Salir";
             this.cmdSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdSalir.UseVisualStyleBackColor = true;
@@ -178,10 +67,10 @@ namespace SCCI
             this.cmdImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdImprimir.Image = global::SCCI.Properties.Resources.Imprimir;
             this.cmdImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdImprimir.Location = new System.Drawing.Point(496, 385);
+            this.cmdImprimir.Location = new System.Drawing.Point(496, 383);
             this.cmdImprimir.Name = "cmdImprimir";
             this.cmdImprimir.Size = new System.Drawing.Size(111, 38);
-            this.cmdImprimir.TabIndex = 35;
+            this.cmdImprimir.TabIndex = 25;
             this.cmdImprimir.Text = "Imprimir";
             this.cmdImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdImprimir.UseVisualStyleBackColor = true;
@@ -191,10 +80,10 @@ namespace SCCI
             this.cmdExportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdExportar.Image = global::SCCI.Properties.Resources.Exportar_Excel;
             this.cmdExportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdExportar.Location = new System.Drawing.Point(379, 385);
+            this.cmdExportar.Location = new System.Drawing.Point(379, 383);
             this.cmdExportar.Name = "cmdExportar";
             this.cmdExportar.Size = new System.Drawing.Size(111, 38);
-            this.cmdExportar.TabIndex = 34;
+            this.cmdExportar.TabIndex = 24;
             this.cmdExportar.Text = "Exportar";
             this.cmdExportar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdExportar.UseVisualStyleBackColor = true;
@@ -204,10 +93,10 @@ namespace SCCI
             this.cmdEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdEliminar.Image = global::SCCI.Properties.Resources.Eliminar;
             this.cmdEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdEliminar.Location = new System.Drawing.Point(262, 385);
+            this.cmdEliminar.Location = new System.Drawing.Point(262, 383);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(111, 38);
-            this.cmdEliminar.TabIndex = 33;
+            this.cmdEliminar.TabIndex = 23;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdEliminar.UseVisualStyleBackColor = true;
@@ -217,10 +106,10 @@ namespace SCCI
             this.cmdModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdModificar.Image = global::SCCI.Properties.Resources.Modificar;
             this.cmdModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdModificar.Location = new System.Drawing.Point(145, 385);
+            this.cmdModificar.Location = new System.Drawing.Point(145, 383);
             this.cmdModificar.Name = "cmdModificar";
             this.cmdModificar.Size = new System.Drawing.Size(111, 38);
-            this.cmdModificar.TabIndex = 32;
+            this.cmdModificar.TabIndex = 22;
             this.cmdModificar.Text = "Modificar";
             this.cmdModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdModificar.UseVisualStyleBackColor = true;
@@ -230,37 +119,134 @@ namespace SCCI
             this.cmdNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdNuevo.Image = global::SCCI.Properties.Resources.Agregar2;
             this.cmdNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdNuevo.Location = new System.Drawing.Point(28, 385);
+            this.cmdNuevo.Location = new System.Drawing.Point(28, 383);
             this.cmdNuevo.Name = "cmdNuevo";
             this.cmdNuevo.Size = new System.Drawing.Size(111, 38);
-            this.cmdNuevo.TabIndex = 31;
+            this.cmdNuevo.TabIndex = 21;
             this.cmdNuevo.Text = "Nuevo";
             this.cmdNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdNuevo.UseVisualStyleBackColor = true;
+            // 
+            // gridBarrios
+            // 
+            this.gridBarrios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridBarrios.Location = new System.Drawing.Point(12, 155);
+            this.gridBarrios.Name = "gridBarrios";
+            this.gridBarrios.Size = new System.Drawing.Size(728, 212);
+            this.gridBarrios.TabIndex = 20;
+            // 
+            // gpbOrdenar
+            // 
+            this.gpbOrdenar.Controls.Add(this.RbOrdenarFech_Reg);
+            this.gpbOrdenar.Controls.Add(this.RbOrdenarBarrios);
+            this.gpbOrdenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.gpbOrdenar.ForeColor = System.Drawing.Color.White;
+            this.gpbOrdenar.Location = new System.Drawing.Point(465, 10);
+            this.gpbOrdenar.Name = "gpbOrdenar";
+            this.gpbOrdenar.Size = new System.Drawing.Size(275, 139);
+            this.gpbOrdenar.TabIndex = 19;
+            this.gpbOrdenar.TabStop = false;
+            this.gpbOrdenar.Text = "Ordenar";
+            // 
+            // RbOrdenarFech_Reg
+            // 
+            this.RbOrdenarFech_Reg.AutoSize = true;
+            this.RbOrdenarFech_Reg.Location = new System.Drawing.Point(16, 90);
+            this.RbOrdenarFech_Reg.Name = "RbOrdenarFech_Reg";
+            this.RbOrdenarFech_Reg.Size = new System.Drawing.Size(159, 21);
+            this.RbOrdenarFech_Reg.TabIndex = 1;
+            this.RbOrdenarFech_Reg.TabStop = true;
+            this.RbOrdenarFech_Reg.Text = "Fecha de Registro";
+            this.RbOrdenarFech_Reg.UseVisualStyleBackColor = true;
+            // 
+            // RbOrdenarBarrios
+            // 
+            this.RbOrdenarBarrios.AutoSize = true;
+            this.RbOrdenarBarrios.Location = new System.Drawing.Point(16, 28);
+            this.RbOrdenarBarrios.Name = "RbOrdenarBarrios";
+            this.RbOrdenarBarrios.Size = new System.Drawing.Size(78, 21);
+            this.RbOrdenarBarrios.TabIndex = 0;
+            this.RbOrdenarBarrios.TabStop = true;
+            this.RbOrdenarBarrios.Text = "Barrios";
+            this.RbOrdenarBarrios.UseVisualStyleBackColor = true;
+            // 
+            // gpbBuscar
+            // 
+            this.gpbBuscar.Controls.Add(this.txtBuscar);
+            this.gpbBuscar.Controls.Add(this.rbFech_Reg);
+            this.gpbBuscar.Controls.Add(this.rbBarrios);
+            this.gpbBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.gpbBuscar.ForeColor = System.Drawing.Color.White;
+            this.gpbBuscar.Location = new System.Drawing.Point(12, 10);
+            this.gpbBuscar.Name = "gpbBuscar";
+            this.gpbBuscar.Size = new System.Drawing.Size(434, 139);
+            this.gpbBuscar.TabIndex = 18;
+            this.gpbBuscar.TabStop = false;
+            this.gpbBuscar.Text = "Buscar";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(150, 47);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(278, 23);
+            this.txtBuscar.TabIndex = 2;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
+            // rbFech_Reg
+            // 
+            this.rbFech_Reg.AutoSize = true;
+            this.rbFech_Reg.Location = new System.Drawing.Point(16, 90);
+            this.rbFech_Reg.Name = "rbFech_Reg";
+            this.rbFech_Reg.Size = new System.Drawing.Size(159, 21);
+            this.rbFech_Reg.TabIndex = 1;
+            this.rbFech_Reg.TabStop = true;
+            this.rbFech_Reg.Text = "Fecha de Registro";
+            this.rbFech_Reg.UseVisualStyleBackColor = true;
+            // 
+            // rbBarrios
+            // 
+            this.rbBarrios.AutoSize = true;
+            this.rbBarrios.Location = new System.Drawing.Point(16, 28);
+            this.rbBarrios.Name = "rbBarrios";
+            this.rbBarrios.Size = new System.Drawing.Size(78, 21);
+            this.rbBarrios.TabIndex = 0;
+            this.rbBarrios.TabStop = true;
+            this.rbBarrios.Text = "Barrios";
+            this.rbBarrios.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(446, 97);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.TabIndex = 17;
             // 
             // BarriosP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(150)))), ((int)(((byte)(226)))));
-            this.ClientSize = new System.Drawing.Size(750, 425);
+            this.ClientSize = new System.Drawing.Size(749, 430);
             this.Controls.Add(this.cmdSalir);
             this.Controls.Add(this.cmdImprimir);
             this.Controls.Add(this.cmdExportar);
             this.Controls.Add(this.cmdEliminar);
             this.Controls.Add(this.cmdModificar);
             this.Controls.Add(this.cmdNuevo);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gridBarrios);
+            this.Controls.Add(this.gpbOrdenar);
+            this.Controls.Add(this.gpbBuscar);
             this.Controls.Add(this.label1);
             this.Name = "BarriosP";
             this.Text = "BarriosP";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridBarrios)).EndInit();
+            this.gpbOrdenar.ResumeLayout(false);
+            this.gpbOrdenar.PerformLayout();
+            this.gpbBuscar.ResumeLayout(false);
+            this.gpbBuscar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,15 +260,14 @@ namespace SCCI
         private System.Windows.Forms.Button cmdEliminar;
         private System.Windows.Forms.Button cmdModificar;
         private System.Windows.Forms.Button cmdNuevo;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton Nacionalidad;
+        private System.Windows.Forms.DataGridView gridBarrios;
+        private System.Windows.Forms.GroupBox gpbOrdenar;
+        private System.Windows.Forms.RadioButton RbOrdenarFech_Reg;
+        private System.Windows.Forms.RadioButton RbOrdenarBarrios;
+        private System.Windows.Forms.GroupBox gpbBuscar;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.RadioButton rbFech_Reg;
+        private System.Windows.Forms.RadioButton rbBarrios;
         private System.Windows.Forms.Label label1;
     }
 }

@@ -29,55 +29,87 @@ namespace SCCI
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.cmdCancelar = new System.Windows.Forms.Button();
             this.cmdGuardar = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.gpbNacionalidad = new System.Windows.Forms.GroupBox();
+            this.txtFecha_Reg = new System.Windows.Forms.DateTimePicker();
+            this.gpoNacionalidades = new System.Windows.Forms.ComboBox();
+            this.gpoActivo = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtClave = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.gpbNacionalidad.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // cmdCancelar
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(3, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(559, 175);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Nacionalidad";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCancelar.Image = global::SCCI.Properties.Resources.Cancelar;
+            this.cmdCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdCancelar.Location = new System.Drawing.Point(548, 196);
+            this.cmdCancelar.Name = "cmdCancelar";
+            this.cmdCancelar.Size = new System.Drawing.Size(111, 38);
+            this.cmdCancelar.TabIndex = 15;
+            this.cmdCancelar.Text = "Cancelar";
+            this.cmdCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cmdCancelar.UseVisualStyleBackColor = true;
             // 
-            // comboBox2
+            // cmdGuardar
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(114, 81);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 8;
+            this.cmdGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdGuardar.Image = global::SCCI.Properties.Resources.Guardar;
+            this.cmdGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdGuardar.Location = new System.Drawing.Point(428, 196);
+            this.cmdGuardar.Name = "cmdGuardar";
+            this.cmdGuardar.Size = new System.Drawing.Size(111, 38);
+            this.cmdGuardar.TabIndex = 14;
+            this.cmdGuardar.Text = "Guardar";
+            this.cmdGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cmdGuardar.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // gpbNacionalidad
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(64, 140);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 7;
+            this.gpbNacionalidad.Controls.Add(this.txtFecha_Reg);
+            this.gpbNacionalidad.Controls.Add(this.gpoNacionalidades);
+            this.gpbNacionalidad.Controls.Add(this.gpoActivo);
+            this.gpbNacionalidad.Controls.Add(this.label4);
+            this.gpbNacionalidad.Controls.Add(this.label3);
+            this.gpbNacionalidad.Controls.Add(this.label2);
+            this.gpbNacionalidad.Controls.Add(this.txtClave);
+            this.gpbNacionalidad.Controls.Add(this.label1);
+            this.gpbNacionalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.gpbNacionalidad.ForeColor = System.Drawing.Color.White;
+            this.gpbNacionalidad.Location = new System.Drawing.Point(9, 15);
+            this.gpbNacionalidad.Name = "gpbNacionalidad";
+            this.gpbNacionalidad.Size = new System.Drawing.Size(656, 175);
+            this.gpbNacionalidad.TabIndex = 13;
+            this.gpbNacionalidad.TabStop = false;
+            this.gpbNacionalidad.Text = "Nacionalidad";
+            // 
+            // txtFecha_Reg
+            // 
+            this.txtFecha_Reg.Location = new System.Drawing.Point(419, 82);
+            this.txtFecha_Reg.Name = "txtFecha_Reg";
+            this.txtFecha_Reg.Size = new System.Drawing.Size(231, 23);
+            this.txtFecha_Reg.TabIndex = 9;
+            // 
+            // gpoNacionalidades
+            // 
+            this.gpoNacionalidades.FormattingEnabled = true;
+            this.gpoNacionalidades.Location = new System.Drawing.Point(131, 80);
+            this.gpoNacionalidades.Name = "gpoNacionalidades";
+            this.gpoNacionalidades.Size = new System.Drawing.Size(121, 24);
+            this.gpoNacionalidades.TabIndex = 8;
+            // 
+            // gpoActivo
+            // 
+            this.gpoActivo.FormattingEnabled = true;
+            this.gpoActivo.Location = new System.Drawing.Point(64, 140);
+            this.gpoActivo.Name = "gpoActivo";
+            this.gpoActivo.Size = new System.Drawing.Size(121, 24);
+            this.gpoActivo.TabIndex = 7;
             // 
             // label4
             // 
@@ -87,13 +119,6 @@ namespace SCCI
             this.label4.Size = new System.Drawing.Size(52, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "Activo";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(419, 81);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(134, 23);
-            this.textBox3.TabIndex = 5;
             // 
             // label3
             // 
@@ -109,16 +134,16 @@ namespace SCCI
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 17);
+            this.label2.Size = new System.Drawing.Size(119, 17);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Nacionalidad";
+            this.label2.Text = "Nacionalidades";
             // 
-            // textBox1
+            // txtClave
             // 
-            this.textBox1.Location = new System.Drawing.Point(60, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(134, 23);
-            this.textBox1.TabIndex = 1;
+            this.txtClave.Location = new System.Drawing.Point(60, 29);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.Size = new System.Drawing.Size(134, 23);
+            this.txtClave.TabIndex = 1;
             // 
             // label1
             // 
@@ -129,61 +154,36 @@ namespace SCCI
             this.label1.TabIndex = 0;
             this.label1.Text = "Clave";
             // 
-            // cmdCancelar
-            // 
-            this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdCancelar.Image = global::SCCI.Properties.Resources.Cancelar;
-            this.cmdCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdCancelar.Location = new System.Drawing.Point(453, 193);
-            this.cmdCancelar.Name = "cmdCancelar";
-            this.cmdCancelar.Size = new System.Drawing.Size(111, 38);
-            this.cmdCancelar.TabIndex = 9;
-            this.cmdCancelar.Text = "Cancelar";
-            this.cmdCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cmdCancelar.UseVisualStyleBackColor = true;
-            // 
-            // cmdGuardar
-            // 
-            this.cmdGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdGuardar.Image = global::SCCI.Properties.Resources.Guardar;
-            this.cmdGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdGuardar.Location = new System.Drawing.Point(336, 193);
-            this.cmdGuardar.Name = "cmdGuardar";
-            this.cmdGuardar.Size = new System.Drawing.Size(111, 38);
-            this.cmdGuardar.TabIndex = 8;
-            this.cmdGuardar.Text = "Guardar";
-            this.cmdGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cmdGuardar.UseVisualStyleBackColor = true;
-            // 
             // NacionalidadesAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(150)))), ((int)(((byte)(226)))));
-            this.ClientSize = new System.Drawing.Size(574, 242);
+            this.ClientSize = new System.Drawing.Size(674, 249);
             this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.cmdGuardar);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gpbNacionalidad);
             this.Name = "NacionalidadesAM";
             this.Text = "NacionalidadesAM";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Load += new System.EventHandler(this.Nacionalidades_AM_Load);
+            this.gpbNacionalidad.ResumeLayout(false);
+            this.gpbNacionalidad.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button cmdCancelar;
         private System.Windows.Forms.Button cmdGuardar;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.GroupBox gpbNacionalidad;
+        private System.Windows.Forms.DateTimePicker txtFecha_Reg;
+        private System.Windows.Forms.ComboBox gpoNacionalidades;
+        private System.Windows.Forms.ComboBox gpoActivo;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtClave;
+        private System.Windows.Forms.Label label1;
     }
 }
