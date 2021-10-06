@@ -34,7 +34,7 @@ namespace SCCI
             this.cmdExportar = new System.Windows.Forms.Button();
             this.cmdEliminar = new System.Windows.Forms.Button();
             this.cmdModificar = new System.Windows.Forms.Button();
-            this.cmdNuevo = new System.Windows.Forms.Button();
+            this.cmdAgregar = new System.Windows.Forms.Button();
             this.gridBarrios = new System.Windows.Forms.DataGridView();
             this.gpbOrdenar = new System.Windows.Forms.GroupBox();
             this.RbOrdenarFech_Reg = new System.Windows.Forms.RadioButton();
@@ -61,6 +61,7 @@ namespace SCCI
             this.cmdSalir.Text = "Salir";
             this.cmdSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdSalir.UseVisualStyleBackColor = true;
+            this.cmdSalir.Click += new System.EventHandler(this.cmdSalir_Click);
             // 
             // cmdImprimir
             // 
@@ -74,6 +75,7 @@ namespace SCCI
             this.cmdImprimir.Text = "Imprimir";
             this.cmdImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdImprimir.UseVisualStyleBackColor = true;
+            this.cmdImprimir.Click += new System.EventHandler(this.cmdImprimir_Click);
             // 
             // cmdExportar
             // 
@@ -87,6 +89,7 @@ namespace SCCI
             this.cmdExportar.Text = "Exportar";
             this.cmdExportar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdExportar.UseVisualStyleBackColor = true;
+            this.cmdExportar.Click += new System.EventHandler(this.cmdExportar_Click);
             // 
             // cmdEliminar
             // 
@@ -100,6 +103,7 @@ namespace SCCI
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdEliminar.UseVisualStyleBackColor = true;
+            this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
             // 
             // cmdModificar
             // 
@@ -113,19 +117,21 @@ namespace SCCI
             this.cmdModificar.Text = "Modificar";
             this.cmdModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdModificar.UseVisualStyleBackColor = true;
+            this.cmdModificar.Click += new System.EventHandler(this.cmdModificar_Click);
             // 
-            // cmdNuevo
+            // cmdAgregar
             // 
-            this.cmdNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdNuevo.Image = global::SCCI.Properties.Resources.Agregar2;
-            this.cmdNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdNuevo.Location = new System.Drawing.Point(28, 383);
-            this.cmdNuevo.Name = "cmdNuevo";
-            this.cmdNuevo.Size = new System.Drawing.Size(111, 38);
-            this.cmdNuevo.TabIndex = 21;
-            this.cmdNuevo.Text = "Nuevo";
-            this.cmdNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cmdNuevo.UseVisualStyleBackColor = true;
+            this.cmdAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdAgregar.Image = global::SCCI.Properties.Resources.Agregar2;
+            this.cmdAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdAgregar.Location = new System.Drawing.Point(28, 383);
+            this.cmdAgregar.Name = "cmdAgregar";
+            this.cmdAgregar.Size = new System.Drawing.Size(111, 38);
+            this.cmdAgregar.TabIndex = 21;
+            this.cmdAgregar.Text = "Nuevo";
+            this.cmdAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cmdAgregar.UseVisualStyleBackColor = true;
+            this.cmdAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
             // 
             // gridBarrios
             // 
@@ -235,7 +241,7 @@ namespace SCCI
             this.Controls.Add(this.cmdExportar);
             this.Controls.Add(this.cmdEliminar);
             this.Controls.Add(this.cmdModificar);
-            this.Controls.Add(this.cmdNuevo);
+            this.Controls.Add(this.cmdAgregar);
             this.Controls.Add(this.gridBarrios);
             this.Controls.Add(this.gpbOrdenar);
             this.Controls.Add(this.gpbBuscar);
@@ -259,7 +265,7 @@ namespace SCCI
         private System.Windows.Forms.Button cmdExportar;
         private System.Windows.Forms.Button cmdEliminar;
         private System.Windows.Forms.Button cmdModificar;
-        private System.Windows.Forms.Button cmdNuevo;
+        private System.Windows.Forms.Button cmdAgregar;
         private System.Windows.Forms.DataGridView gridBarrios;
         private System.Windows.Forms.GroupBox gpbOrdenar;
         private System.Windows.Forms.RadioButton RbOrdenarFech_Reg;

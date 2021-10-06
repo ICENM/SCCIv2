@@ -16,16 +16,23 @@ namespace SCCI
         DataTable Datos = new DataTable();
         NacionalidadesAM formulario = new NacionalidadesAM();
         string F1, F2, SQL;
+
         private void RefrescarDatos()
         {
             Datos.Clear();
-            Datos = Metodos.Mostrar("SELECT * FROM Nacionalidades");
+            Datos = Metodos.Mostrar("CALL Nacionalidades");
 
             gridNacionalidades.DataSource = Datos;
         }
-        private void formulario_FormClosed(object sender, FormClosedEventArgs e)
+
+        private void NacionalidadesP_FormClosed(object sender, FormClosedEventArgs e)
         {
             RefrescarDatos();
+        }
+
+        public NacionalidadesP()
+        {
+            InitializeComponent();
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
@@ -44,13 +51,15 @@ namespace SCCI
             Datos = Metodos.Mostrar(SQL);
 
             gridNacionalidades.DataSource = Datos;
+
         }
 
-        private void cmdAgregar_Click(object sender, EventArgs e)
+        private void cmdNuevo_Click(object sender, EventArgs e)
         {
             Metodos.Control_F = 'A';
-            formulario.FormClosed += new FormClosedEventHandler(formulario_FormClosed);
+            formulario.FormClosed += new FormClosedEventHandler(NacionalidadesP_FormClosed);
             formulario.ShowDialog();
+
         }
 
         private void cmdModificar_Click(object sender, EventArgs e)
@@ -58,8 +67,9 @@ namespace SCCI
             Metodos.Control_F = 'M';
             Metodos.Control_CS = gridNacionalidades.Rows[gridNacionalidades.CurrentRow.Index].Cells[0].Value.ToString();
 
-            formulario.FormClosed += new FormClosedEventHandler(formulario_FormClosed);
+            formulario.FormClosed += new FormClosedEventHandler(NacionalidadesP_FormClosed);
             formulario.ShowDialog();
+
         }
 
         private void cmdEliminar_Click(object sender, EventArgs e)
@@ -79,15 +89,16 @@ namespace SCCI
 
         private void cmdExportar_Click(object sender, EventArgs e)
         {
-            Metodos.ExportarExcel(gridNacionalidades);
-        }
+                Metodos.ExportarExcel(gridNacionalidades);
+            }
 
         private void cmdImprimir_Click(object sender, EventArgs e)
         {
             Rep_Individual_Nacionalidades R = new Rep_Individual_Nacionalidades();
             string SQL = String.Format("SELECT * FROM Nacionalidades WHERE COD = '{0}'", gridNacionalidades.Rows[gridNacionalidades.CurrentRow.Index].Cells[0].Value.ToString());
 
-            Metodos.Imprimir_Reporte(SQL, "Barrios", R);
+            Metodos.Imprimir_Reporte(SQL, "Nacionalidades", R);
+
         }
 
         private void cmdSalir_Click(object sender, EventArgs e)
@@ -95,14 +106,10 @@ namespace SCCI
             Close();
         }
 
-        public NacionalidadesP()
-        {
-            InitializeComponent();
-        }
-
-        private void Nacionalidades_P_Load(object sender, EventArgs e)
+        private void NacionalidadesP_Load(object sender, EventArgs e)
         {
             RefrescarDatos();
         }
+     
     }
 }

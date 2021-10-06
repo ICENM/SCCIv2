@@ -88,5 +88,20 @@ namespace SCCI
         {
             Close();
         }
+
+        private void gpbNacionalidad_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtClave_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gpoNacionalidades_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

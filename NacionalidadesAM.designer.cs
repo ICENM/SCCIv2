@@ -55,6 +55,7 @@ namespace SCCI
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdCancelar.UseVisualStyleBackColor = true;
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
             // 
             // cmdGuardar
             // 
@@ -68,6 +69,7 @@ namespace SCCI
             this.cmdGuardar.Text = "Guardar";
             this.cmdGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdGuardar.UseVisualStyleBackColor = true;
+            this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
             // 
             // gpbNacionalidad
             // 
@@ -87,6 +89,7 @@ namespace SCCI
             this.gpbNacionalidad.TabIndex = 13;
             this.gpbNacionalidad.TabStop = false;
             this.gpbNacionalidad.Text = "Nacionalidad";
+            this.gpbNacionalidad.Enter += new System.EventHandler(this.gpbNacionalidad_Enter);
             // 
             // txtFecha_Reg
             // 
@@ -102,6 +105,7 @@ namespace SCCI
             this.gpoNacionalidades.Name = "gpoNacionalidades";
             this.gpoNacionalidades.Size = new System.Drawing.Size(121, 24);
             this.gpoNacionalidades.TabIndex = 8;
+            this.gpoNacionalidades.SelectedIndexChanged += new System.EventHandler(this.gpoNacionalidades_SelectedIndexChanged);
             // 
             // gpoActivo
             // 
@@ -144,6 +148,7 @@ namespace SCCI
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(134, 23);
             this.txtClave.TabIndex = 1;
+            this.txtClave.TextChanged += new System.EventHandler(this.txtClave_TextChanged);
             // 
             // label1
             // 

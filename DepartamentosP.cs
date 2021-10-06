@@ -95,6 +95,10 @@ namespace SCCI
             Close();
         }
 
+        private void rbDepartamentos_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
         public DepartamentosP()
         {
             InitializeComponent();

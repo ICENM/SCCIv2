@@ -61,6 +61,7 @@ namespace SCCI
             this.cmdSalir.Text = "Salir";
             this.cmdSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdSalir.UseVisualStyleBackColor = true;
+            this.cmdSalir.Click += new System.EventHandler(this.cmdSalir_Click);
             // 
             // cmdImprimir
             // 
@@ -74,6 +75,7 @@ namespace SCCI
             this.cmdImprimir.Text = "Imprimir";
             this.cmdImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdImprimir.UseVisualStyleBackColor = true;
+            this.cmdImprimir.Click += new System.EventHandler(this.cmdImprimir_Click);
             // 
             // cmdExportar
             // 
@@ -87,6 +89,7 @@ namespace SCCI
             this.cmdExportar.Text = "Exportar";
             this.cmdExportar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdExportar.UseVisualStyleBackColor = true;
+            this.cmdExportar.Click += new System.EventHandler(this.cmdExportar_Click);
             // 
             // cmdEliminar
             // 
@@ -100,6 +103,7 @@ namespace SCCI
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdEliminar.UseVisualStyleBackColor = true;
+            this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
             // 
             // cmdModificar
             // 
@@ -113,6 +117,7 @@ namespace SCCI
             this.cmdModificar.Text = "Modificar";
             this.cmdModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdModificar.UseVisualStyleBackColor = true;
+            this.cmdModificar.Click += new System.EventHandler(this.cmdModificar_Click);
             // 
             // cmdNuevo
             // 
@@ -126,6 +131,7 @@ namespace SCCI
             this.cmdNuevo.Text = "Nuevo";
             this.cmdNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdNuevo.UseVisualStyleBackColor = true;
+            this.cmdNuevo.Click += new System.EventHandler(this.cmdNuevo_Click);
             // 
             // gridNacionalidades
             // 
@@ -242,7 +248,8 @@ namespace SCCI
             this.Controls.Add(this.label1);
             this.Name = "NacionalidadesP";
             this.Text = "NacionalidadesP";
-            this.Load += new System.EventHandler(this.Nacionalidades_P_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NacionalidadesP_FormClosed);
+            this.Load += new System.EventHandler(this.NacionalidadesP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridNacionalidades)).EndInit();
             this.gpbOrdenar.ResumeLayout(false);
             this.gpbOrdenar.PerformLayout();
