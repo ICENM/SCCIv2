@@ -16,14 +16,14 @@ namespace SCCI {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Rep_Ind_NotaP : ReportClass {
+    public class Rep_Ind_Matricula : ReportClass {
         
-        public Rep_Ind_NotaP() {
+        public Rep_Ind_Matricula() {
         }
         
         public override string ResourceName {
             get {
-                return "Rep_Ind_NotaP.rpt";
+                return "Rep_Ind_Matricula.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace SCCI {
         
         public override string FullResourceName {
             get {
-                return "SCCI.Rep_Ind_NotaP.rpt";
+                return "SCCI.Rep_Ind_Matricula.rpt";
             }
             set {
                 // Do nothing
@@ -98,9 +98,9 @@ namespace SCCI {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedRep_Ind_NotaP : Component, ICachedReport {
+    public class CachedRep_Ind_Matricula : Component, ICachedReport {
         
-        public CachedRep_Ind_NotaP() {
+        public CachedRep_Ind_Matricula() {
         }
         
         [Browsable(false)]
@@ -137,7 +137,7 @@ namespace SCCI {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Rep_Ind_NotaP rpt = new Rep_Ind_NotaP();
+            Rep_Ind_Matricula rpt = new Rep_Ind_Matricula();
             rpt.Site = this.Site;
             return rpt;
         }

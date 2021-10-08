@@ -16,14 +16,14 @@ namespace SCCI {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Rep_Ind_NotaP : ReportClass {
+    public class Rep_Gen_Alumnos : ReportClass {
         
-        public Rep_Ind_NotaP() {
+        public Rep_Gen_Alumnos() {
         }
         
         public override string ResourceName {
             get {
-                return "Rep_Ind_NotaP.rpt";
+                return "Rep_Gen_Alumnos.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace SCCI {
         
         public override string FullResourceName {
             get {
-                return "SCCI.Rep_Ind_NotaP.rpt";
+                return "SCCI.Rep_Gen_Alumnos.rpt";
             }
             set {
                 // Do nothing
@@ -87,20 +87,12 @@ namespace SCCI {
                 return this.ReportDefinition.Sections[4];
             }
         }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Usuario {
-            get {
-                return this.DataDefinition.ParameterFields[0];
-            }
-        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedRep_Ind_NotaP : Component, ICachedReport {
+    public class CachedRep_Gen_Alumnos : Component, ICachedReport {
         
-        public CachedRep_Ind_NotaP() {
+        public CachedRep_Gen_Alumnos() {
         }
         
         [Browsable(false)]
@@ -137,7 +129,7 @@ namespace SCCI {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Rep_Ind_NotaP rpt = new Rep_Ind_NotaP();
+            Rep_Gen_Alumnos rpt = new Rep_Gen_Alumnos();
             rpt.Site = this.Site;
             return rpt;
         }
