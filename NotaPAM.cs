@@ -20,14 +20,7 @@ namespace SCCI
 
         private void NotaPAM_Load(object sender, EventArgs e)
         {
-            Metodos.CargarCombo("SELECT * FROM Grados", cboGrado);
-            Metodos.CargarCombo("SELECT * FROM Carreras", cboCarrera);
-            Metodos.CargarCombo("SELECT * FROM Asignaturas", cboAsignatura);
-            Metodos.CargarCombo("SELECT * FROM Periodos", cboPeriodo);
-            Metodos.CargarCombo("SELECT * FROM Docentes", cboDocente);
-            Metodos.CargarCombo("SELECT * FROM Jornadas", cboJornada);
-            Metodos.CargarCombo("SELECT * FROM Alumnos", cboAlumno);
-            Metodos.CargarCombo("SELECT * FROM Evaluacion", cboEvaluacion);
+            Metodos.CargarCombo("SELECT * FROM MATRICULA", cboMatricula);
 
             Metodos.Limpiar(gpbDatosNotap);
 
@@ -49,19 +42,12 @@ namespace SCCI
                     {
 
                         txtCodigo.Text = Lector.GetString(0);
-                        cboGrado.SelectedValue = Lector.GetString(1);
-                        cboCarrera.SelectedValue = Lector.GetString(2);
-                        cboAsignatura.SelectedValue = Lector.GetString(3);
-                        cboPeriodo.SelectedValue = Lector.GetString(4);
-                        cboDocente.SelectedValue = Lector.GetString(5);
-                        cboJornada.SelectedValue = Lector.GetString(6);
-                        cboAlumno.SelectedValue = Lector.GetString(7);
-                        cboEvaluacion.SelectedValue = Lector.GetString(8);
-                        txtI.Text = Lector.GetString(9);
-                        txtII.Text = Lector.GetString(10);
-                        txtIII.Text = Lector.GetString(11);
-                        txtIV.Text = Lector.GetString(12);
-                        cboActivo.Text = Lector.GetString(13);
+                        cboMatricula.SelectedValue = Lector.GetString(1);
+                        txtI.Text = Lector.GetString(2);
+                        txtII.Text = Lector.GetString(3);
+                        txtIII.Text = Lector.GetString(4);
+                        txtIV.Text = Lector.GetString(5);
+                        cboActivo.Text = Lector.GetString(6);
 
                     }
                 }
@@ -75,14 +61,7 @@ namespace SCCI
             MySqlParameter[] Parametros = new MySqlParameter[]
             {
                 new MySqlParameter("@COD", txtCodigo.Text),
-                new MySqlParameter("@GRA", cboGrado.SelectedValue),
-                new MySqlParameter("@CAR", cboCarrera.SelectedValue),
-                new MySqlParameter("@ASI", cboAsignatura.SelectedValue),
-                new MySqlParameter("@PER", cboPeriodo.SelectedValue),
-                new MySqlParameter("@DOC", cboDocente.SelectedValue),
-                new MySqlParameter("@JOR", cboJornada.SelectedValue),
-                new MySqlParameter("@ALU", cboAlumno.SelectedValue),
-                new MySqlParameter("@EVA", cboEvaluacion.SelectedValue),
+                new MySqlParameter("@MAT", cboMatricula.SelectedValue),
                 new MySqlParameter("@IPA", txtI.Text),
                 new MySqlParameter("@IIPA", txtII.Text),
                 new MySqlParameter("@IIIPA", txtIII.Text),

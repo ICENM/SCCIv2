@@ -37,14 +37,11 @@
             this.cmdModificar = new System.Windows.Forms.Button();
             this.cmdNuevo = new System.Windows.Forms.Button();
             this.gpbOrdenar = new System.Windows.Forms.GroupBox();
-            this.rbOrdenarGrado = new System.Windows.Forms.RadioButton();
-            this.rbOrdenarAlumno = new System.Windows.Forms.RadioButton();
+            this.rbOrdenarMatricula = new System.Windows.Forms.RadioButton();
             this.rbOrdenarCodigo = new System.Windows.Forms.RadioButton();
             this.gpbBuscar = new System.Windows.Forms.GroupBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.cmdBuscar = new System.Windows.Forms.Button();
-            this.rbGrado = new System.Windows.Forms.RadioButton();
-            this.rbAlumno = new System.Windows.Forms.RadioButton();
+            this.rbMatricula = new System.Windows.Forms.RadioButton();
             this.rbCodigo = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridNotapP)).BeginInit();
             this.gpbOrdenar.SuspendLayout();
@@ -55,11 +52,11 @@
             // 
             this.gridNotapP.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(129)))), ((int)(((byte)(136)))));
             this.gridNotapP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridNotapP.Location = new System.Drawing.Point(12, 183);
+            this.gridNotapP.Location = new System.Drawing.Point(12, 143);
             this.gridNotapP.Name = "gridNotapP";
             this.gridNotapP.RowHeadersWidth = 62;
             this.gridNotapP.RowTemplate.Height = 28;
-            this.gridNotapP.Size = new System.Drawing.Size(1037, 206);
+            this.gridNotapP.Size = new System.Drawing.Size(1037, 246);
             this.gridNotapP.TabIndex = 137;
             // 
             // cmdSalir
@@ -154,39 +151,27 @@
             // 
             // gpbOrdenar
             // 
-            this.gpbOrdenar.Controls.Add(this.rbOrdenarGrado);
-            this.gpbOrdenar.Controls.Add(this.rbOrdenarAlumno);
+            this.gpbOrdenar.Controls.Add(this.rbOrdenarMatricula);
             this.gpbOrdenar.Controls.Add(this.rbOrdenarCodigo);
             this.gpbOrdenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbOrdenar.ForeColor = System.Drawing.Color.White;
-            this.gpbOrdenar.Location = new System.Drawing.Point(803, 15);
+            this.gpbOrdenar.Location = new System.Drawing.Point(882, 12);
             this.gpbOrdenar.Name = "gpbOrdenar";
-            this.gpbOrdenar.Size = new System.Drawing.Size(247, 153);
-            this.gpbOrdenar.TabIndex = 130;
+            this.gpbOrdenar.Size = new System.Drawing.Size(169, 113);
+            this.gpbOrdenar.TabIndex = 146;
             this.gpbOrdenar.TabStop = false;
             this.gpbOrdenar.Text = "Ordenar";
             // 
-            // rbOrdenarGrado
+            // rbOrdenarMatricula
             // 
-            this.rbOrdenarGrado.AutoSize = true;
-            this.rbOrdenarGrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbOrdenarGrado.Location = new System.Drawing.Point(6, 103);
-            this.rbOrdenarGrado.Name = "rbOrdenarGrado";
-            this.rbOrdenarGrado.Size = new System.Drawing.Size(90, 26);
-            this.rbOrdenarGrado.TabIndex = 5;
-            this.rbOrdenarGrado.Text = "Grado";
-            this.rbOrdenarGrado.UseVisualStyleBackColor = true;
-            // 
-            // rbOrdenarAlumno
-            // 
-            this.rbOrdenarAlumno.AutoSize = true;
-            this.rbOrdenarAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbOrdenarAlumno.Location = new System.Drawing.Point(6, 71);
-            this.rbOrdenarAlumno.Name = "rbOrdenarAlumno";
-            this.rbOrdenarAlumno.Size = new System.Drawing.Size(101, 26);
-            this.rbOrdenarAlumno.TabIndex = 4;
-            this.rbOrdenarAlumno.Text = "Alumno";
-            this.rbOrdenarAlumno.UseVisualStyleBackColor = true;
+            this.rbOrdenarMatricula.AutoSize = true;
+            this.rbOrdenarMatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbOrdenarMatricula.Location = new System.Drawing.Point(6, 71);
+            this.rbOrdenarMatricula.Name = "rbOrdenarMatricula";
+            this.rbOrdenarMatricula.Size = new System.Drawing.Size(116, 26);
+            this.rbOrdenarMatricula.TabIndex = 4;
+            this.rbOrdenarMatricula.Text = "Matrícula";
+            this.rbOrdenarMatricula.UseVisualStyleBackColor = true;
             // 
             // rbOrdenarCodigo
             // 
@@ -204,62 +189,34 @@
             // gpbBuscar
             // 
             this.gpbBuscar.Controls.Add(this.txtBuscar);
-            this.gpbBuscar.Controls.Add(this.cmdBuscar);
-            this.gpbBuscar.Controls.Add(this.rbGrado);
-            this.gpbBuscar.Controls.Add(this.rbAlumno);
+            this.gpbBuscar.Controls.Add(this.rbMatricula);
             this.gpbBuscar.Controls.Add(this.rbCodigo);
             this.gpbBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbBuscar.ForeColor = System.Drawing.Color.White;
-            this.gpbBuscar.Location = new System.Drawing.Point(13, 15);
+            this.gpbBuscar.Location = new System.Drawing.Point(14, 12);
             this.gpbBuscar.Name = "gpbBuscar";
-            this.gpbBuscar.Size = new System.Drawing.Size(784, 153);
-            this.gpbBuscar.TabIndex = 129;
+            this.gpbBuscar.Size = new System.Drawing.Size(862, 113);
+            this.gpbBuscar.TabIndex = 145;
             this.gpbBuscar.TabStop = false;
             this.gpbBuscar.Text = "Buscar";
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(175, 36);
+            this.txtBuscar.Location = new System.Drawing.Point(150, 49);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(603, 30);
+            this.txtBuscar.Size = new System.Drawing.Size(678, 30);
             this.txtBuscar.TabIndex = 4;
             // 
-            // cmdBuscar
+            // rbMatricula
             // 
-            this.cmdBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmdBuscar.ForeColor = System.Drawing.Color.Black;
-            this.cmdBuscar.Image = ((System.Drawing.Image)(resources.GetObject("cmdBuscar.Image")));
-            this.cmdBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdBuscar.Location = new System.Drawing.Point(610, 72);
-            this.cmdBuscar.Name = "cmdBuscar";
-            this.cmdBuscar.Size = new System.Drawing.Size(168, 68);
-            this.cmdBuscar.TabIndex = 3;
-            this.cmdBuscar.Text = "Buscar";
-            this.cmdBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cmdBuscar.UseVisualStyleBackColor = false;
-            this.cmdBuscar.Click += new System.EventHandler(this.cmdBuscar_Click);
-            // 
-            // rbGrado
-            // 
-            this.rbGrado.AutoSize = true;
-            this.rbGrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbGrado.Location = new System.Drawing.Point(7, 103);
-            this.rbGrado.Name = "rbGrado";
-            this.rbGrado.Size = new System.Drawing.Size(90, 26);
-            this.rbGrado.TabIndex = 2;
-            this.rbGrado.Text = "Grado";
-            this.rbGrado.UseVisualStyleBackColor = true;
-            // 
-            // rbAlumno
-            // 
-            this.rbAlumno.AutoSize = true;
-            this.rbAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbAlumno.Location = new System.Drawing.Point(7, 71);
-            this.rbAlumno.Name = "rbAlumno";
-            this.rbAlumno.Size = new System.Drawing.Size(101, 26);
-            this.rbAlumno.TabIndex = 1;
-            this.rbAlumno.Text = "Alumno";
-            this.rbAlumno.UseVisualStyleBackColor = true;
+            this.rbMatricula.AutoSize = true;
+            this.rbMatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMatricula.Location = new System.Drawing.Point(7, 71);
+            this.rbMatricula.Name = "rbMatricula";
+            this.rbMatricula.Size = new System.Drawing.Size(116, 26);
+            this.rbMatricula.TabIndex = 1;
+            this.rbMatricula.Text = "Matrícula";
+            this.rbMatricula.UseVisualStyleBackColor = true;
             // 
             // rbCodigo
             // 
@@ -280,15 +237,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(150)))), ((int)(((byte)(226)))));
             this.ClientSize = new System.Drawing.Size(1062, 487);
+            this.Controls.Add(this.gpbOrdenar);
+            this.Controls.Add(this.gpbBuscar);
             this.Controls.Add(this.gridNotapP);
             this.Controls.Add(this.cmdSalir);
             this.Controls.Add(this.cmdImprimir);
             this.Controls.Add(this.cmdModificar);
             this.Controls.Add(this.cmdNuevo);
             this.Controls.Add(this.cmdExportar);
-            this.Controls.Add(this.gpbOrdenar);
             this.Controls.Add(this.cmdEliminar);
-            this.Controls.Add(this.gpbBuscar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -315,14 +272,11 @@
         private System.Windows.Forms.Button cmdModificar;
         private System.Windows.Forms.Button cmdNuevo;
         private System.Windows.Forms.GroupBox gpbOrdenar;
-        private System.Windows.Forms.RadioButton rbOrdenarGrado;
-        private System.Windows.Forms.RadioButton rbOrdenarAlumno;
+        private System.Windows.Forms.RadioButton rbOrdenarMatricula;
         private System.Windows.Forms.RadioButton rbOrdenarCodigo;
         private System.Windows.Forms.GroupBox gpbBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button cmdBuscar;
-        private System.Windows.Forms.RadioButton rbGrado;
-        private System.Windows.Forms.RadioButton rbAlumno;
+        private System.Windows.Forms.RadioButton rbMatricula;
         private System.Windows.Forms.RadioButton rbCodigo;
     }
 }

@@ -47,11 +47,9 @@ namespace SCCI
             F2 = "";
 
             if (rbCodigo.Checked) F1 = "CODIGO";
-            if (rbAlumno.Checked) F1 = "ALUMNO";
-            if (rbGrado.Checked) F1 = "GRADO";
+            if (rbMatricula.Checked) F1 = "MATRICULA";
             if (rbOrdenarCodigo.Checked) F2 = "CODIGO";
-            if (rbOrdenarAlumno.Checked) F2 = "ALUMNO";
-            if (rbOrdenarGrado.Checked) F2 = "GRADO";
+            if (rbOrdenarMatricula.Checked) F2 = "MATRICULA";
 
             SQL = String.Format("SELECT * FROM NotaS WHERE {0} LIKE '%{1}%' ORDER BY {2}", F1, txtBuscar.Text, F2);
 
@@ -110,6 +108,26 @@ namespace SCCI
         private void cmdSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            string F1, F2, SQL;
+
+            F1 = "";
+            F2 = "";
+
+            if (rbCodigo.Checked) F1 = "CODIGO";
+            if (rbMatricula.Checked) F1 = "MATRICULA";
+            if (rbOrdenarCodigo.Checked) F2 = "CODIGO";
+            if (rbOrdenarMatricula.Checked) F2 = "MATRICULA";
+
+            SQL = String.Format("SELECT * FROM NotaP WHERE {0} LIKE '%{1}%' ORDER BY {2}", F1, txtBuscar.Text, F2);
+
+            Datos.Clear();
+            Datos = Metodos.Mostrar(SQL);
+
+            gridNotaS.DataSource = Datos;
         }
     }
 }

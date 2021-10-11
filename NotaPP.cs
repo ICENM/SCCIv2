@@ -34,28 +34,6 @@ namespace SCCI
             InitializeComponent();
         }
 
-        private void cmdBuscar_Click(object sender, EventArgs e)
-        {
-            string F1, F2, SQL;
-
-            F1 = "";
-            F2 = "";
-
-            if (rbCodigo.Checked) F1 = "CODIGO";
-            if (rbAlumno.Checked) F1 = "ALUMNO";
-            if (rbGrado.Checked) F1 = "GRADO";
-            if (rbOrdenarCodigo.Checked) F2 = "CODIGO";
-            if (rbOrdenarAlumno.Checked) F2 = "ALUMNO";
-            if (rbOrdenarGrado.Checked) F2 = "GRADO";
-
-            SQL = String.Format("SELECT * FROM NotaP WHERE {0} LIKE '%{1}%' ORDER BY {2}", F1, txtBuscar.Text, F2);
-
-            Datos.Clear();
-            Datos = Metodos.Mostrar(SQL);
-
-            gridNotapP.DataSource = Datos;
-        }
-
         private void cmdNuevo_Click(object sender, EventArgs e)
         {
             Metodos.Control_F = 'A';
@@ -110,6 +88,26 @@ namespace SCCI
         private void NotaPP_Load(object sender, EventArgs e)
         {
             RefrescarDatos();
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            string F1, F2, SQL;
+
+            F1 = "";
+            F2 = "";
+
+            if (rbCodigo.Checked) F1 = "CODIGO";
+            if (rbMatricula.Checked) F1 = "MATRICULA";
+            if (rbOrdenarCodigo.Checked) F2 = "CODIGO";
+            if (rbOrdenarMatricula.Checked) F2 = "MATRICULA";
+
+            SQL = String.Format("SELECT * FROM NotaP WHERE {0} LIKE '%{1}%' ORDER BY {2}", F1, txtBuscar.Text, F2);
+
+            Datos.Clear();
+            Datos = Metodos.Mostrar(SQL);
+
+            gridNotapP.DataSource = Datos;
         }
     }
 }
