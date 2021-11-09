@@ -29,10 +29,9 @@ namespace SCCI
         /// </summary>
         private void InitializeComponent()
         {
-            this.gpdDatosBarrios = new System.Windows.Forms.GroupBox();
-            this.txtBarrio = new System.Windows.Forms.TextBox();
-            this.txtFecha = new System.Windows.Forms.DateTimePicker();
-            this.cboActivo = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,62 +39,43 @@ namespace SCCI
             this.label1 = new System.Windows.Forms.Label();
             this.cmdCancelar = new System.Windows.Forms.Button();
             this.cmdGuardar = new System.Windows.Forms.Button();
-            this.gpdDatosBarrios.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gpdDatosBarrios
+            // groupBox1
             // 
-            this.gpdDatosBarrios.Controls.Add(this.txtBarrio);
-            this.gpdDatosBarrios.Controls.Add(this.txtFecha);
-            this.gpdDatosBarrios.Controls.Add(this.cboActivo);
-            this.gpdDatosBarrios.Controls.Add(this.label4);
-            this.gpdDatosBarrios.Controls.Add(this.label3);
-            this.gpdDatosBarrios.Controls.Add(this.label2);
-            this.gpdDatosBarrios.Controls.Add(this.txtClave);
-            this.gpdDatosBarrios.Controls.Add(this.label1);
-            this.gpdDatosBarrios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.gpdDatosBarrios.ForeColor = System.Drawing.Color.White;
-            this.gpdDatosBarrios.Location = new System.Drawing.Point(18, 18);
-            this.gpdDatosBarrios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gpdDatosBarrios.Name = "gpdDatosBarrios";
-            this.gpdDatosBarrios.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gpdDatosBarrios.Size = new System.Drawing.Size(653, 343);
-            this.gpdDatosBarrios.TabIndex = 13;
-            this.gpdDatosBarrios.TabStop = false;
-            this.gpdDatosBarrios.Text = "Datos Barrios";
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(566, 175);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Barrios";
             // 
-            // txtBarrio
+            // comboBox2
             // 
-            this.txtBarrio.Location = new System.Drawing.Point(241, 85);
-            this.txtBarrio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtBarrio.Multiline = true;
-            this.txtBarrio.Name = "txtBarrio";
-            this.txtBarrio.Size = new System.Drawing.Size(396, 117);
-            this.txtBarrio.TabIndex = 11;
-            this.txtBarrio.Tag = "Barrio";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(60, 84);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox2.TabIndex = 9;
             // 
-            // txtFecha
+            // comboBox1
             // 
-            this.txtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtFecha.Location = new System.Drawing.Point(241, 227);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(210, 30);
-            this.txtFecha.TabIndex = 10;
-            this.txtFecha.Tag = "Fecha de Registro";
-            // 
-            // cboActivo
-            // 
-            this.cboActivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboActivo.FormattingEnabled = true;
-            this.cboActivo.Items.AddRange(new object[] {
-            "0",
-            "1"});
-            this.cboActivo.Location = new System.Drawing.Point(241, 281);
-            this.cboActivo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cboActivo.Name = "cboActivo";
-            this.cboActivo.Size = new System.Drawing.Size(210, 33);
-            this.cboActivo.TabIndex = 7;
-            this.cboActivo.Tag = "No Validar";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(60, 140);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 7;
             // 
             // label4
             // 
@@ -110,8 +90,7 @@ namespace SCCI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 232);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(236, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(187, 25);
             this.label3.TabIndex = 4;
@@ -123,19 +102,16 @@ namespace SCCI
             this.label2.Location = new System.Drawing.Point(132, 86);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 25);
+            this.label2.Size = new System.Drawing.Size(52, 17);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Barrio";
+            this.label2.Text = "Barrios";
             // 
             // txtClave
             // 
-            this.txtClave.Enabled = false;
-            this.txtClave.Location = new System.Drawing.Point(241, 33);
-            this.txtClave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtClave.Name = "txtClave";
-            this.txtClave.Size = new System.Drawing.Size(396, 30);
-            this.txtClave.TabIndex = 1;
-            this.txtClave.Tag = "No Validar";
+            this.textBox1.Location = new System.Drawing.Point(60, 29);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(134, 23);
+            this.textBox1.TabIndex = 1;
             // 
             // label1
             // 
@@ -149,52 +125,44 @@ namespace SCCI
             // 
             // cmdCancelar
             // 
-            this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdCancelar.Image = global::SCCI.Properties.Resources.Cancelar;
             this.cmdCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdCancelar.Location = new System.Drawing.Point(337, 371);
-            this.cmdCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmdCancelar.Location = new System.Drawing.Point(470, 198);
             this.cmdCancelar.Name = "cmdCancelar";
-            this.cmdCancelar.Size = new System.Drawing.Size(168, 68);
+            this.cmdCancelar.Size = new System.Drawing.Size(111, 38);
             this.cmdCancelar.TabIndex = 15;
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdCancelar.UseVisualStyleBackColor = true;
-            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
             // 
             // cmdGuardar
             // 
-            this.cmdGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.cmdGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdGuardar.Image = global::SCCI.Properties.Resources.Guardar;
             this.cmdGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdGuardar.Location = new System.Drawing.Point(161, 371);
-            this.cmdGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmdGuardar.Location = new System.Drawing.Point(353, 198);
             this.cmdGuardar.Name = "cmdGuardar";
-            this.cmdGuardar.Size = new System.Drawing.Size(168, 68);
+            this.cmdGuardar.Size = new System.Drawing.Size(111, 38);
             this.cmdGuardar.TabIndex = 14;
             this.cmdGuardar.Text = "Guardar";
             this.cmdGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdGuardar.UseVisualStyleBackColor = true;
-            this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
             // 
             // BarriosAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(150)))), ((int)(((byte)(226)))));
-            this.ClientSize = new System.Drawing.Size(689, 453);
+            this.ClientSize = new System.Drawing.Size(590, 248);
             this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.cmdGuardar);
-            this.Controls.Add(this.gpdDatosBarrios);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.Controls.Add(this.groupBox1);
             this.Name = "BarriosAM";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "BarriosAM";
             this.Load += new System.EventHandler(this.BarriosAM_Load);
-            this.gpdDatosBarrios.ResumeLayout(false);
-            this.gpdDatosBarrios.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -203,14 +171,13 @@ namespace SCCI
 
         private System.Windows.Forms.Button cmdCancelar;
         private System.Windows.Forms.Button cmdGuardar;
-        private System.Windows.Forms.GroupBox gpdDatosBarrios;
-        private System.Windows.Forms.ComboBox cboActivo;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker txtFecha;
-        private System.Windows.Forms.TextBox txtBarrio;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
