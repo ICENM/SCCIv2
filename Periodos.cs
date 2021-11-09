@@ -110,5 +110,25 @@ namespace SCCI
 
             Metodos.Imprimir_Reporte(SQL, "Periodos", R);
         }
+
+        private void rbordenarperiodo_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbordenarfecha_registro_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbfecha_registro_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbperiodo_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -161,6 +161,12 @@
     <Compile Include="Grados_P.designer.cs">
       <DependentUpon>Grados_P.cs</DependentUpon>
     </Compile>
+    <Compile Include="Rep_Ind_Municipios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rep_Ind_Municipios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Jornadas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -437,6 +443,9 @@
     <EmbeddedResource Include="AsignaturasAM.resx">
       <DependentUpon>AsignaturasAM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AsignaturasP.resx">
+      <DependentUpon>AsignaturasP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BarriosAM.resx">
       <DependentUpon>BarriosAM.cs</DependentUpon>
     </EmbeddedResource>
@@ -472,6 +481,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Grados_P.resx">
       <DependentUpon>Grados_P.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_Ind_Municipios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rep_Ind_Municipios.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Jornadas.resx">
       <DependentUpon>Jornadas.cs</DependentUpon>

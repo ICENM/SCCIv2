@@ -41,7 +41,6 @@ namespace SCCI
             this.rbOrdenarNombre = new System.Windows.Forms.RadioButton();
             this.rbOrdenarDNI = new System.Windows.Forms.RadioButton();
             this.gpbBuscar = new System.Windows.Forms.GroupBox();
-            this.cmdBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.rbDireccion = new System.Windows.Forms.RadioButton();
             this.rbNombre = new System.Windows.Forms.RadioButton();
@@ -54,78 +53,90 @@ namespace SCCI
             // 
             // cmdSalir
             // 
+            this.cmdSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.cmdSalir.Image = ((System.Drawing.Image)(resources.GetObject("cmdSalir.Image")));
             this.cmdSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdSalir.Location = new System.Drawing.Point(813, 416);
+            this.cmdSalir.Location = new System.Drawing.Point(883, 507);
+            this.cmdSalir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmdSalir.Name = "cmdSalir";
-            this.cmdSalir.Size = new System.Drawing.Size(155, 61);
+            this.cmdSalir.Size = new System.Drawing.Size(168, 68);
             this.cmdSalir.TabIndex = 26;
-            this.cmdSalir.Text = "SALIR";
+            this.cmdSalir.Text = "Salir";
             this.cmdSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdSalir.UseVisualStyleBackColor = true;
             this.cmdSalir.Click += new System.EventHandler(this.cmdSalir_Click);
             // 
             // cmdImprimir
             // 
+            this.cmdImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.cmdImprimir.Image = ((System.Drawing.Image)(resources.GetObject("cmdImprimir.Image")));
             this.cmdImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdImprimir.Location = new System.Drawing.Point(652, 416);
+            this.cmdImprimir.Location = new System.Drawing.Point(709, 506);
+            this.cmdImprimir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmdImprimir.Name = "cmdImprimir";
-            this.cmdImprimir.Size = new System.Drawing.Size(155, 61);
+            this.cmdImprimir.Size = new System.Drawing.Size(168, 68);
             this.cmdImprimir.TabIndex = 25;
-            this.cmdImprimir.Text = "IMPRIMIR";
+            this.cmdImprimir.Text = "Imprimir";
             this.cmdImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdImprimir.UseVisualStyleBackColor = true;
             this.cmdImprimir.Click += new System.EventHandler(this.cmdImprimir_Click);
             // 
             // cmdExportar
             // 
+            this.cmdExportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.cmdExportar.Image = ((System.Drawing.Image)(resources.GetObject("cmdExportar.Image")));
             this.cmdExportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdExportar.Location = new System.Drawing.Point(491, 416);
+            this.cmdExportar.Location = new System.Drawing.Point(535, 506);
+            this.cmdExportar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmdExportar.Name = "cmdExportar";
-            this.cmdExportar.Size = new System.Drawing.Size(155, 61);
+            this.cmdExportar.Size = new System.Drawing.Size(168, 68);
             this.cmdExportar.TabIndex = 24;
-            this.cmdExportar.Text = "EXPORTAR";
+            this.cmdExportar.Text = "Exportar";
             this.cmdExportar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdExportar.UseVisualStyleBackColor = true;
             this.cmdExportar.Click += new System.EventHandler(this.cmdExportar_Click);
             // 
             // cmdELiminar
             // 
+            this.cmdELiminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.cmdELiminar.Image = ((System.Drawing.Image)(resources.GetObject("cmdELiminar.Image")));
             this.cmdELiminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdELiminar.Location = new System.Drawing.Point(330, 416);
+            this.cmdELiminar.Location = new System.Drawing.Point(361, 507);
+            this.cmdELiminar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmdELiminar.Name = "cmdELiminar";
-            this.cmdELiminar.Size = new System.Drawing.Size(155, 61);
+            this.cmdELiminar.Size = new System.Drawing.Size(168, 68);
             this.cmdELiminar.TabIndex = 23;
-            this.cmdELiminar.Text = "ELIMINAR";
+            this.cmdELiminar.Text = "Eliminar";
             this.cmdELiminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdELiminar.UseVisualStyleBackColor = true;
             this.cmdELiminar.Click += new System.EventHandler(this.cmdELiminar_Click);
             // 
             // cmdModificar
             // 
+            this.cmdModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdModificar.Image = ((System.Drawing.Image)(resources.GetObject("cmdModificar.Image")));
             this.cmdModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdModificar.Location = new System.Drawing.Point(172, 416);
+            this.cmdModificar.Location = new System.Drawing.Point(187, 507);
+            this.cmdModificar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmdModificar.Name = "cmdModificar";
-            this.cmdModificar.Size = new System.Drawing.Size(155, 61);
+            this.cmdModificar.Size = new System.Drawing.Size(168, 68);
             this.cmdModificar.TabIndex = 22;
-            this.cmdModificar.Text = "MODIFICAR";
+            this.cmdModificar.Text = "Modificar";
             this.cmdModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdModificar.UseVisualStyleBackColor = true;
             this.cmdModificar.Click += new System.EventHandler(this.cmdModificar_Click);
             // 
             // cmdNuevo
             // 
+            this.cmdNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdNuevo.Image = ((System.Drawing.Image)(resources.GetObject("cmdNuevo.Image")));
             this.cmdNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdNuevo.Location = new System.Drawing.Point(13, 416);
+            this.cmdNuevo.Location = new System.Drawing.Point(13, 506);
+            this.cmdNuevo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmdNuevo.Name = "cmdNuevo";
-            this.cmdNuevo.Size = new System.Drawing.Size(155, 61);
+            this.cmdNuevo.Size = new System.Drawing.Size(168, 68);
             this.cmdNuevo.TabIndex = 21;
-            this.cmdNuevo.Text = "NUEVO";
+            this.cmdNuevo.Text = "Nuevo";
             this.cmdNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdNuevo.UseVisualStyleBackColor = true;
             this.cmdNuevo.Click += new System.EventHandler(this.cmdNuevo_Click);
@@ -137,9 +148,11 @@ namespace SCCI
             this.gpbOrdenar.Controls.Add(this.rbOrdenarDNI);
             this.gpbOrdenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbOrdenar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gpbOrdenar.Location = new System.Drawing.Point(731, 20);
+            this.gpbOrdenar.Location = new System.Drawing.Point(848, 11);
+            this.gpbOrdenar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gpbOrdenar.Name = "gpbOrdenar";
-            this.gpbOrdenar.Size = new System.Drawing.Size(237, 153);
+            this.gpbOrdenar.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gpbOrdenar.Size = new System.Drawing.Size(203, 164);
             this.gpbOrdenar.TabIndex = 19;
             this.gpbOrdenar.TabStop = false;
             this.gpbOrdenar.Text = "Ordenar";
@@ -147,31 +160,36 @@ namespace SCCI
             // rbOrdenarDireccion
             // 
             this.rbOrdenarDireccion.AutoSize = true;
-            this.rbOrdenarDireccion.Location = new System.Drawing.Point(21, 115);
+            this.rbOrdenarDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.rbOrdenarDireccion.Location = new System.Drawing.Point(24, 114);
+            this.rbOrdenarDireccion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbOrdenarDireccion.Name = "rbOrdenarDireccion";
-            this.rbOrdenarDireccion.Size = new System.Drawing.Size(132, 24);
+            this.rbOrdenarDireccion.Size = new System.Drawing.Size(143, 26);
             this.rbOrdenarDireccion.TabIndex = 2;
-            this.rbOrdenarDireccion.TabStop = true;
             this.rbOrdenarDireccion.Text = "DIRECCION";
             this.rbOrdenarDireccion.UseVisualStyleBackColor = true;
             // 
             // rbOrdenarNombre
             // 
             this.rbOrdenarNombre.AutoSize = true;
-            this.rbOrdenarNombre.Location = new System.Drawing.Point(21, 79);
+            this.rbOrdenarNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.rbOrdenarNombre.Location = new System.Drawing.Point(24, 80);
+            this.rbOrdenarNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbOrdenarNombre.Name = "rbOrdenarNombre";
-            this.rbOrdenarNombre.Size = new System.Drawing.Size(110, 24);
+            this.rbOrdenarNombre.Size = new System.Drawing.Size(119, 26);
             this.rbOrdenarNombre.TabIndex = 1;
-            this.rbOrdenarNombre.TabStop = true;
             this.rbOrdenarNombre.Text = "NOMBRE";
             this.rbOrdenarNombre.UseVisualStyleBackColor = true;
             // 
             // rbOrdenarDNI
             // 
             this.rbOrdenarDNI.AutoSize = true;
-            this.rbOrdenarDNI.Location = new System.Drawing.Point(21, 37);
+            this.rbOrdenarDNI.Checked = true;
+            this.rbOrdenarDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.rbOrdenarDNI.Location = new System.Drawing.Point(24, 46);
+            this.rbOrdenarDNI.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbOrdenarDNI.Name = "rbOrdenarDNI";
-            this.rbOrdenarDNI.Size = new System.Drawing.Size(62, 24);
+            this.rbOrdenarDNI.Size = new System.Drawing.Size(68, 26);
             this.rbOrdenarDNI.TabIndex = 0;
             this.rbOrdenarDNI.TabStop = true;
             this.rbOrdenarDNI.Text = "DNI";
@@ -179,69 +197,64 @@ namespace SCCI
             // 
             // gpbBuscar
             // 
-            this.gpbBuscar.Controls.Add(this.cmdBuscar);
             this.gpbBuscar.Controls.Add(this.txtBuscar);
             this.gpbBuscar.Controls.Add(this.rbDireccion);
             this.gpbBuscar.Controls.Add(this.rbNombre);
             this.gpbBuscar.Controls.Add(this.rbDNI);
             this.gpbBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbBuscar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.gpbBuscar.Location = new System.Drawing.Point(13, 20);
+            this.gpbBuscar.Location = new System.Drawing.Point(13, 11);
+            this.gpbBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gpbBuscar.Name = "gpbBuscar";
-            this.gpbBuscar.Size = new System.Drawing.Size(705, 153);
+            this.gpbBuscar.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gpbBuscar.Size = new System.Drawing.Size(829, 164);
             this.gpbBuscar.TabIndex = 18;
             this.gpbBuscar.TabStop = false;
             this.gpbBuscar.Text = "Buscar";
             // 
-            // cmdBuscar
-            // 
-            this.cmdBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cmdBuscar.Image = ((System.Drawing.Image)(resources.GetObject("cmdBuscar.Image")));
-            this.cmdBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdBuscar.Location = new System.Drawing.Point(544, 65);
-            this.cmdBuscar.Name = "cmdBuscar";
-            this.cmdBuscar.Size = new System.Drawing.Size(155, 61);
-            this.cmdBuscar.TabIndex = 4;
-            this.cmdBuscar.Text = "BUSCAR";
-            this.cmdBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cmdBuscar.UseVisualStyleBackColor = true;
-            this.cmdBuscar.Click += new System.EventHandler(this.button1_Click);
-            // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(128, 37);
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(216, 76);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(571, 27);
+            this.txtBuscar.Size = new System.Drawing.Size(560, 30);
             this.txtBuscar.TabIndex = 3;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // rbDireccion
             // 
             this.rbDireccion.AutoSize = true;
-            this.rbDireccion.Location = new System.Drawing.Point(22, 115);
+            this.rbDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.rbDireccion.Location = new System.Drawing.Point(25, 114);
+            this.rbDireccion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbDireccion.Name = "rbDireccion";
-            this.rbDireccion.Size = new System.Drawing.Size(132, 24);
+            this.rbDireccion.Size = new System.Drawing.Size(143, 26);
             this.rbDireccion.TabIndex = 2;
-            this.rbDireccion.TabStop = true;
             this.rbDireccion.Text = "DIRECCION";
             this.rbDireccion.UseVisualStyleBackColor = true;
             // 
             // rbNombre
             // 
             this.rbNombre.AutoSize = true;
-            this.rbNombre.Location = new System.Drawing.Point(22, 79);
+            this.rbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.rbNombre.Location = new System.Drawing.Point(25, 80);
+            this.rbNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbNombre.Name = "rbNombre";
-            this.rbNombre.Size = new System.Drawing.Size(110, 24);
+            this.rbNombre.Size = new System.Drawing.Size(119, 26);
             this.rbNombre.TabIndex = 1;
-            this.rbNombre.TabStop = true;
             this.rbNombre.Text = "NOMBRE";
             this.rbNombre.UseVisualStyleBackColor = true;
             // 
             // rbDNI
             // 
             this.rbDNI.AutoSize = true;
-            this.rbDNI.Location = new System.Drawing.Point(22, 37);
+            this.rbDNI.Checked = true;
+            this.rbDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.rbDNI.Location = new System.Drawing.Point(25, 46);
+            this.rbDNI.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbDNI.Name = "rbDNI";
-            this.rbDNI.Size = new System.Drawing.Size(62, 24);
+            this.rbDNI.Size = new System.Drawing.Size(68, 26);
             this.rbDNI.TabIndex = 0;
             this.rbDNI.TabStop = true;
             this.rbDNI.Text = "DNI";
@@ -250,19 +263,20 @@ namespace SCCI
             // gridAlumnos
             // 
             this.gridAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridAlumnos.Location = new System.Drawing.Point(13, 180);
+            this.gridAlumnos.Location = new System.Drawing.Point(13, 183);
+            this.gridAlumnos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridAlumnos.Name = "gridAlumnos";
             this.gridAlumnos.RowHeadersWidth = 51;
             this.gridAlumnos.RowTemplate.Height = 24;
-            this.gridAlumnos.Size = new System.Drawing.Size(955, 230);
+            this.gridAlumnos.Size = new System.Drawing.Size(1038, 316);
             this.gridAlumnos.TabIndex = 27;
             // 
             // AlumnosP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(150)))), ((int)(((byte)(226)))));
-            this.ClientSize = new System.Drawing.Size(980, 496);
+            this.ClientSize = new System.Drawing.Size(1063, 590);
             this.Controls.Add(this.gridAlumnos);
             this.Controls.Add(this.cmdSalir);
             this.Controls.Add(this.cmdImprimir);
@@ -272,8 +286,13 @@ namespace SCCI
             this.Controls.Add(this.cmdNuevo);
             this.Controls.Add(this.gpbOrdenar);
             this.Controls.Add(this.gpbBuscar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AlumnosP";
-            this.Text = "AlumnosP";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "Alumnos";
             this.Load += new System.EventHandler(this.AlumnosP_Load);
             this.gpbOrdenar.ResumeLayout(false);
             this.gpbOrdenar.PerformLayout();
@@ -297,7 +316,6 @@ namespace SCCI
         private System.Windows.Forms.RadioButton rbOrdenarNombre;
         private System.Windows.Forms.RadioButton rbOrdenarDNI;
         private System.Windows.Forms.GroupBox gpbBuscar;
-        private System.Windows.Forms.Button cmdBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.RadioButton rbDireccion;
         private System.Windows.Forms.RadioButton rbNombre;

@@ -14,7 +14,7 @@ namespace SCCI
     public partial class MatriculaP : Form
     {
         DataTable Datos = new DataTable();
-        NotaSAM formulario = new NotaSAM();
+        MatriculaAM formulario = new MatriculaAM();
 
         private void RefrescarDatos()
         {

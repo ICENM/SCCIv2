@@ -19,9 +19,9 @@ namespace SCCI
         private void RefrescarDatos()
         {
             Datos.Clear();
-            Datos = Metodos.Mostrar("Call Consultar_Todos");
+            Datos = Metodos.Mostrar("Select * From Carreras WHERE ACTIVO = 'S'");
 
-            gridcarrera.DataSource = Datos;
+            gridcarrera.DataSource = Datos; 
         }
 
         private void formulario_FormClosed(object sender, FormClosedEventArgs e)
@@ -44,27 +44,6 @@ namespace SCCI
             RefrescarDatos();
         }
 
-        private void cmdBuscar_Click(object sender, EventArgs e)
-        {
-            string F1, F2, SQL;
-
-            F1 = "";
-            F2 = "";
-
-            if (rbcodigo.Checked) F1 = "Codigo";
-            if (rbcarrera.Checked) F1 = "Carrera";
-
-            if (rbordenarcodigo.Checked) F2 = "Codigo";
-            if (rbordenarcarrera.Checked) F2 = "Carrera";
-
-            SQL = String.Format("SELECT * FROM Carreras WHERE {0} LIKE '%{1}%' ORDER BY {2}", F1, txtBuscar.Text, F2);
-
-            Datos.Clear();
-            Datos = Metodos.Mostrar(SQL);
-
-            gridcarrera.DataSource = Datos;
-        }
-
         private void cmdagregar_Click(object sender, EventArgs e)
         {
             Metodos.Control_F = 'A';
@@ -85,11 +64,11 @@ namespace SCCI
         {
             if (MessageBox.Show("¿Desea realmente eliminar el registro seleccionado?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                string dni = gridcarrera.Rows[gridcarrera.CurrentRow.Index].Cells[0].Value.ToString();
+                string CODIGO = gridcarrera.Rows[gridcarrera.CurrentRow.Index].Cells[0].Value.ToString();
 
-                MySqlParameter[] Par = new MySqlParameter[] { new MySqlParameter("@Ident", dni) };
+                MySqlParameter[] Par = new MySqlParameter[] { new MySqlParameter("@COD", CODIGO) };
 
-                Metodos.EjecutarP("Eliminar", Par);
+                Metodos.EjecutarP("Eliminar_Carreras", Par);
 
                 MessageBox.Show("Registro eliminado con éxito", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -106,9 +85,34 @@ namespace SCCI
         {
             Rep_Ind_Carreras R = new Rep_Ind_Carreras();
 
-            string SQL = String.Format("SELECT * FROM Carreras WHERE Id = '{0}'", gridcarrera.Rows[gridcarrera.CurrentRow.Index].Cells[0].Value.ToString());
+            string SQL = String.Format("SELECT * FROM Carreras WHERE CODIGO = '{0}'", gridcarrera.Rows[gridcarrera.CurrentRow.Index].Cells[0].Value.ToString());
 
             Metodos.Imprimir_Reporte(SQL, "Carreras", R);
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            string F1, F2, SQL;
+
+            F1 = "";
+            F2 = "";
+
+            if (rbcodigo.Checked) F1 = "CODIGO";
+            if (rbcarrera.Checked) F1 = "CARRERA";
+            if (rbordenarcodigo.Checked) F2 = "CODIGO";
+            if (rbordenarcarrera.Checked) F2 = "CARRERA";
+
+            SQL = String.Format("SELECT * FROM Carreras WHERE {0} LIKE '%{1}%' ORDER BY {2}", F1, txtBuscar.Text, F2);
+
+            Datos.Clear();
+            Datos = Metodos.Mostrar(SQL);
+
+            gridcarrera.DataSource = Datos;
+        }
+
+        private void Carreras_Load_1(object sender, EventArgs e)
+        {
+            RefrescarDatos();
         }
     }
 }

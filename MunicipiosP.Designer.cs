@@ -30,162 +30,181 @@ namespace SCCI
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbMunicipio = new System.Windows.Forms.RadioButton();
+            this.rbClave = new System.Windows.Forms.RadioButton();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.rbOrdenarMunicipio = new System.Windows.Forms.RadioButton();
+            this.rbOrdenarClave = new System.Windows.Forms.RadioButton();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gridMunicipios = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridMunicipios)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(17, 2);
+            this.groupBox1.Controls.Add(this.rbMunicipio);
+            this.groupBox1.Controls.Add(this.rbClave);
+            this.groupBox1.Controls.Add(this.txtBuscar);
+            this.groupBox1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.Location = new System.Drawing.Point(13, 3);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(351, 129);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(832, 123);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar";
             // 
-            // textBox1
+            // rbMunicipio
             // 
-            this.textBox1.Location = new System.Drawing.Point(53, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(257, 22);
-            this.textBox1.TabIndex = 0;
+            this.rbMunicipio.AutoSize = true;
+            this.rbMunicipio.Location = new System.Drawing.Point(8, 71);
+            this.rbMunicipio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbMunicipio.Name = "rbMunicipio";
+            this.rbMunicipio.Size = new System.Drawing.Size(126, 28);
+            this.rbMunicipio.TabIndex = 2;
+            this.rbMunicipio.Text = "Municipio";
+            this.rbMunicipio.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbClave
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(18, 47);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(55, 20);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Clave";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbClave.AutoSize = true;
+            this.rbClave.Checked = true;
+            this.rbClave.Location = new System.Drawing.Point(8, 33);
+            this.rbClave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbClave.Name = "rbClave";
+            this.rbClave.Size = new System.Drawing.Size(87, 28);
+            this.rbClave.TabIndex = 1;
+            this.rbClave.TabStop = true;
+            this.rbClave.Text = "Clave";
+            this.rbClave.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // txtBuscar
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(18, 80);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(78, 20);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Municipio";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.txtBuscar.Location = new System.Drawing.Point(185, 49);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(597, 30);
+            this.txtBuscar.TabIndex = 0;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton4);
-            this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(390, 12);
+            this.groupBox2.Controls.Add(this.rbOrdenarMunicipio);
+            this.groupBox2.Controls.Add(this.rbOrdenarClave);
+            this.groupBox2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox2.Location = new System.Drawing.Point(853, 3);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(334, 105);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(205, 123);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ordenar";
             // 
-            // radioButton3
+            // rbOrdenarMunicipio
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(6, 31);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(62, 20);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Clave";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbOrdenarMunicipio.AutoSize = true;
+            this.rbOrdenarMunicipio.Location = new System.Drawing.Point(8, 71);
+            this.rbOrdenarMunicipio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbOrdenarMunicipio.Name = "rbOrdenarMunicipio";
+            this.rbOrdenarMunicipio.Size = new System.Drawing.Size(126, 28);
+            this.rbOrdenarMunicipio.TabIndex = 3;
+            this.rbOrdenarMunicipio.Text = "Municipio";
+            this.rbOrdenarMunicipio.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rbOrdenarClave
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(6, 80);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(88, 20);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Municipio";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rbOrdenarClave.AutoSize = true;
+            this.rbOrdenarClave.Checked = true;
+            this.rbOrdenarClave.Location = new System.Drawing.Point(8, 33);
+            this.rbOrdenarClave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbOrdenarClave.Name = "rbOrdenarClave";
+            this.rbOrdenarClave.Size = new System.Drawing.Size(87, 28);
+            this.rbOrdenarClave.TabIndex = 2;
+            this.rbOrdenarClave.TabStop = true;
+            this.rbOrdenarClave.Text = "Clave";
+            this.rbOrdenarClave.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
-            this.button7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Image = global::SCCI.Properties.Resources.Salir32;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button7.Location = new System.Drawing.Point(604, 321);
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(890, 476);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(105, 42);
+            this.button7.Size = new System.Drawing.Size(168, 68);
             this.button7.TabIndex = 7;
             this.button7.Text = "Salir";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
-            this.button6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Image = global::SCCI.Properties.Resources.Imprimir;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button6.Location = new System.Drawing.Point(492, 321);
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(714, 476);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(105, 42);
+            this.button6.Size = new System.Drawing.Size(168, 68);
             this.button6.TabIndex = 6;
             this.button6.Text = "Imprimir";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
-            this.button5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Image = global::SCCI.Properties.Resources.Exportar_Excel;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button5.Location = new System.Drawing.Point(359, 321);
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(538, 476);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(116, 42);
+            this.button5.Size = new System.Drawing.Size(168, 68);
             this.button5.TabIndex = 5;
             this.button5.Text = "Exportar ";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Image = global::SCCI.Properties.Resources.Eliminar;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button4.Location = new System.Drawing.Point(248, 321);
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(362, 476);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(105, 42);
+            this.button4.Size = new System.Drawing.Size(168, 68);
             this.button4.TabIndex = 4;
             this.button4.Text = "Eliminar";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = global::SCCI.Properties.Resources.Modificar;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button3.Location = new System.Drawing.Point(122, 321);
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(188, 476);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 42);
+            this.button3.Size = new System.Drawing.Size(168, 68);
             this.button3.TabIndex = 3;
             this.button3.Text = "Modificar";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -194,46 +213,36 @@ namespace SCCI
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = global::SCCI.Properties.Resources.Agregar2;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button2.Location = new System.Drawing.Point(8, 321);
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(12, 476);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 42);
+            this.button2.Size = new System.Drawing.Size(168, 68);
             this.button2.TabIndex = 2;
             this.button2.Text = "Nuevo";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // gridMunicipios
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::SCCI.Properties.Resources.Buscar;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(221, 69);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 46);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Buscar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 137);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(724, 166);
-            this.dataGridView1.TabIndex = 31;
+            this.gridMunicipios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridMunicipios.Location = new System.Drawing.Point(12, 136);
+            this.gridMunicipios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridMunicipios.Name = "gridMunicipios";
+            this.gridMunicipios.RowHeadersWidth = 62;
+            this.gridMunicipios.Size = new System.Drawing.Size(1046, 330);
+            this.gridMunicipios.TabIndex = 31;
             // 
             // MunicipiosP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(150)))), ((int)(((byte)(226)))));
-            this.ClientSize = new System.Drawing.Size(744, 375);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1072, 557);
+            this.Controls.Add(this.gridMunicipios);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -242,13 +251,19 @@ namespace SCCI
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MunicipiosP";
-            this.Text = "MunicipiosP";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "Municipios";
+            this.Load += new System.EventHandler(this.MunicipiosP_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridMunicipios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -256,19 +271,18 @@ namespace SCCI
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton rbClave;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.RadioButton rbMunicipio;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton rbOrdenarMunicipio;
+        private System.Windows.Forms.RadioButton rbOrdenarClave;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridMunicipios;
     }
 }

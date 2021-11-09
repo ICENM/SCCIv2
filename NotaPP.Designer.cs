@@ -251,7 +251,7 @@
             this.MinimizeBox = false;
             this.Name = "NotaPP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Nota Parcial";
+            this.Text = "Notas Parcial";
             this.Load += new System.EventHandler(this.NotaPP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridNotapP)).EndInit();
             this.gpbOrdenar.ResumeLayout(false);

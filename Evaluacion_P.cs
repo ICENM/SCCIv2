@@ -15,11 +15,11 @@ namespace SCCI
     {
         DataTable Datos = new DataTable();
         Evaluacion_AM formulario = new Evaluacion_AM();
-        string F1, F2, SQL;
+
         private void RefrescarDatos()
         {
             Datos.Clear();
-            Datos = Metodos.Mostrar("SELECT * FROM Evaluacion");
+            Datos = Metodos.Mostrar("SELECT * FROM Evaluacion WHERE ACTIVO = 'S'");
 
             dgvEvaluacion.DataSource = Datos;
         }
@@ -30,15 +30,17 @@ namespace SCCI
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
+            string F1, F2, SQL;
+
             F1 = "";
             F2 = "";
 
             if (rbCodigo.Checked) F1 = "Codigo";
-            if (rbTipoEvaluacion.Checked) F1 = "Tipo Evaluacion";
-            if (rbFecha.Checked) F1 = "Fecha";
+            if (rbTipoEvaluacion.Checked) F1 = "Tipo_Evaluacion";
+            if (rbFecha.Checked) F1 = "FECHA_REGISTRO";
             if (rbOrdenarCodigo.Checked) F2 = "Codigo";
-            if (rbOrdenarTipoEvaluacion.Checked) F2 = "Tipo Evaluacion";
-            if (rbOrdenarFecha.Checked) F2 = "Fecha";
+            if (rbOrdenarTipoEvaluacion.Checked) F2 = "Tipo_Evaluacion";
+            if (rbOrdenarFecha.Checked) F2 = "FECHA_REGISTRO";
 
             SQL = String.Format("SELECT * FROM Evaluacion WHERE {0} LIKE '%{1}%' ORDER BY {2}", F1, txtBuscar.Text, F2);
 
@@ -87,7 +89,7 @@ namespace SCCI
         private void cmdImprimir_Click(object sender, EventArgs e)
         {
             Rep_Ind_Evaluacion fe = new Rep_Ind_Evaluacion();
-            string SQL = String.Format("SELECT * FROM Evaluacion WHERE COD = '{0}'", dgvEvaluacion.Rows[dgvEvaluacion.CurrentRow.Index].Cells[0].Value.ToString());
+            string SQL = String.Format("SELECT * FROM Evaluacion WHERE CODIGO = '{0}'", dgvEvaluacion.Rows[dgvEvaluacion.CurrentRow.Index].Cells[0].Value.ToString());
 
             Metodos.Imprimir_Reporte(SQL, "Evaluacion", fe);
         }

@@ -126,7 +126,7 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(142, 67);
+            this.txtBuscar.Location = new System.Drawing.Point(143, 67);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(506, 30);
             this.txtBuscar.TabIndex = 4;

@@ -26,7 +26,7 @@ namespace SCCI
             try
             {
                 Conexion = new MySqlConnection();
-                Conexion.ConnectionString = "server=localhost;user id=root;password=InformaticaDTS;database=SCCI";
+                Conexion.ConnectionString = "server=localhost;user id=root;password=geometrydash22;database=SCCI";
 
                 if (Conexion.State == ConnectionState.Closed)
                     Conexion.Open();

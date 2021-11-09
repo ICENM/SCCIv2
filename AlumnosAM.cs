@@ -61,16 +61,15 @@ namespace SCCI
                         txtDNI.Text = Lector.GetString(0);
                         txtNombre.Text = Lector.GetString(1);
                         txtApellidos.Text = Lector.GetString(2);
-                        txtFotos.Text = Lector.GetString(3);
-                        cboSexo.Text = Lector.GetString(4);
-                        txtCorreo.Text = Lector.GetString(5);
-                        txtTelefono.Text = Lector.GetString(6);
-                        txtFecha.Value = Lector.GetDateTime(7);
-                        txtDireccion.Text = Lector.GetString(8);
-                        cboNacionalidad.SelectedValue = Lector.GetString(9);
-                        cboDepartamento.SelectedValue = Lector.GetString(10);
-                        cboMunicipio.SelectedValue = Lector.GetString(11);
-                        cboBarrio.SelectedValue = Lector.GetString(12);
+                        cboSexo.Text = Lector.GetString(3);
+                        txtCorreo.Text = Lector.GetString(4);
+                        txtTelefono.Text = Lector.GetString(5);
+                        txtFecha.Value = Lector.GetDateTime(6);
+                        txtDireccion.Text = Lector.GetString(7);
+                        cboNacionalidad.SelectedValue = Lector.GetString(8);
+                        cboDepartamento.SelectedValue = Lector.GetString(9);
+                        cboMunicipio.SelectedValue = Lector.GetString(10);
+                        cboBarrio.SelectedValue = Lector.GetString(11);
                         cboActivo.Text = Lector.GetString(12);
 
                     }
@@ -88,8 +87,7 @@ namespace SCCI
                 new MySqlParameter("@ID", txtDNI.Text),
                 new MySqlParameter("@NOM", txtNombre.Text),
                 new MySqlParameter("@APE", txtApellidos.Text),
-                new MySqlParameter("@FOT", txtFotos.Text),
-                new MySqlParameter("@SEX", cboSexo.Text),
+                new MySqlParameter("@SE", cboSexo.Text),
                 new MySqlParameter("@COR", txtCorreo.Text),
                 new MySqlParameter("@TEL", txtTelefono.Text),
                 new MySqlParameter("@FEC", txtFecha.Value),
@@ -97,8 +95,7 @@ namespace SCCI
                 new MySqlParameter("@NAC", cboNacionalidad.SelectedValue),
                 new MySqlParameter("@DEP", cboDepartamento.SelectedValue),
                 new MySqlParameter("@MUN", cboMunicipio.SelectedValue),
-                new MySqlParameter("@BAR", cboBarrio.SelectedValue),
-                new MySqlParameter("@ACT", cboActivo.Text),
+                new MySqlParameter("@BAR", cboBarrio.SelectedValue)
 
             };
 
@@ -125,6 +122,11 @@ namespace SCCI
         {
             this.Close();
             Metodos.Control_F = ' ';
+        }
+
+        private void gpbAlumnos_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

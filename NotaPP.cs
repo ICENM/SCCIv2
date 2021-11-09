@@ -19,7 +19,7 @@ namespace SCCI
         private void RefrescarDatos()
         {
             Datos.Clear();
-            Datos = Metodos.Mostrar("SELECT * FROM NotaP ");
+            Datos = Metodos.Mostrar("SELECT * FROM NotaP WHERE ACTIVO = 'S'");
 
             gridNotapP.DataSource = Datos;
         }

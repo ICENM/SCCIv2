@@ -164,6 +164,13 @@ namespace SCCI
             SCCI.Show();
         }
 
+        private void asignaturasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AsignaturasP SCCI = new AsignaturasP();
+            SCCI.MdiParent = this;
+            SCCI.Show();
+        }
+
         private void alumnosToolStripMenuItem3_Click(object sender, EventArgs e)
         {
             Rep_Gen_Alumnos Rep = new Rep_Gen_Alumnos();

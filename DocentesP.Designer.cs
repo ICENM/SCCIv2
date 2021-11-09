@@ -42,7 +42,6 @@
             this.rbOrdenarDNI = new System.Windows.Forms.RadioButton();
             this.gpbBuscar = new System.Windows.Forms.GroupBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.cmdBuscar = new System.Windows.Forms.Button();
             this.rbDireccion = new System.Windows.Forms.RadioButton();
             this.rbNombre = new System.Windows.Forms.RadioButton();
             this.rbDNI = new System.Windows.Forms.RadioButton();
@@ -139,6 +138,7 @@
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdEliminar.UseVisualStyleBackColor = true;
+            this.cmdEliminar.TextChanged += new System.EventHandler(this.cmdEliminar_TextChanged);
             this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
             // 
             // gridDocentes
@@ -204,7 +204,6 @@
             // gpbBuscar
             // 
             this.gpbBuscar.Controls.Add(this.txtBuscar);
-            this.gpbBuscar.Controls.Add(this.cmdBuscar);
             this.gpbBuscar.Controls.Add(this.rbDireccion);
             this.gpbBuscar.Controls.Add(this.rbNombre);
             this.gpbBuscar.Controls.Add(this.rbDNI);
@@ -219,25 +218,10 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(163, 39);
+            this.txtBuscar.Location = new System.Drawing.Point(147, 67);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(615, 30);
             this.txtBuscar.TabIndex = 4;
-            // 
-            // cmdBuscar
-            // 
-            this.cmdBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmdBuscar.ForeColor = System.Drawing.Color.Black;
-            this.cmdBuscar.Image = ((System.Drawing.Image)(resources.GetObject("cmdBuscar.Image")));
-            this.cmdBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdBuscar.Location = new System.Drawing.Point(610, 75);
-            this.cmdBuscar.Name = "cmdBuscar";
-            this.cmdBuscar.Size = new System.Drawing.Size(168, 68);
-            this.cmdBuscar.TabIndex = 3;
-            this.cmdBuscar.Text = "Buscar";
-            this.cmdBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cmdBuscar.UseVisualStyleBackColor = false;
-            this.cmdBuscar.Click += new System.EventHandler(this.cmdBuscar_Click);
             // 
             // rbDireccion
             // 
@@ -320,7 +304,6 @@
         private System.Windows.Forms.RadioButton rbOrdenarDNI;
         private System.Windows.Forms.GroupBox gpbBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button cmdBuscar;
         private System.Windows.Forms.RadioButton rbDireccion;
         private System.Windows.Forms.RadioButton rbNombre;
         private System.Windows.Forms.RadioButton rbDNI;

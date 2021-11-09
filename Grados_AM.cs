@@ -25,13 +25,11 @@ namespace SCCI
             if (Metodos.Control_F == 'A')
             {
                 this.Text = "Grados = Nuevo";
-                txtCodigo.Enabled = true;
             }
 
             if (Metodos.Control_F == 'M')
             {
                 this.Text = "Grados = Actualizar";
-                txtCodigo.Enabled = false;
 
 
                 MySqlDataReader l = Metodos.LectorConsulta(String.Format("SELECT * FROM Grados WHERE Codigo ='{0}'", Metodos.Control_CS));
@@ -43,7 +41,7 @@ namespace SCCI
                     {
                         txtCodigo.Text = l.GetString(0);
                         txtGrado.Text = l.GetString(1);
-                        dtpFechaRegistro.Text = l.GetString(2);
+                        dtpFechaRegistro.Value = l.GetDateTime(2);
                         cbActivo.Text = l.GetString(3);
 
 
@@ -61,7 +59,7 @@ namespace SCCI
             {
                 new MySqlParameter("@COD",txtCodigo.Text),
                 new MySqlParameter("@GRA", txtGrado.Text),
-                new MySqlParameter("@FECH", dtpFechaRegistro.Text),
+                new MySqlParameter("@FECH", dtpFechaRegistro.Value),
                 new MySqlParameter("@ACT", cbActivo.Text),
 
 

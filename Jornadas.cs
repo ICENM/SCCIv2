@@ -110,5 +110,15 @@ namespace SCCI
 
             Metodos.Imprimir_Reporte(SQL, "Jornadas", R);
         }
+
+        private void rbjornada_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbcodigo_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

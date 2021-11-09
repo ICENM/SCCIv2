@@ -53,9 +53,11 @@ namespace SCCI
             // dgvEvaluacion
             // 
             this.dgvEvaluacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEvaluacion.Location = new System.Drawing.Point(12, 118);
+            this.dgvEvaluacion.Location = new System.Drawing.Point(18, 182);
+            this.dgvEvaluacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvEvaluacion.Name = "dgvEvaluacion";
-            this.dgvEvaluacion.Size = new System.Drawing.Size(575, 130);
+            this.dgvEvaluacion.RowHeadersWidth = 62;
+            this.dgvEvaluacion.Size = new System.Drawing.Size(1050, 200);
             this.dgvEvaluacion.TabIndex = 11;
             // 
             // gbOrdenar
@@ -64,9 +66,11 @@ namespace SCCI
             this.gbOrdenar.Controls.Add(this.rbOrdenarTipoEvaluacion);
             this.gbOrdenar.Controls.Add(this.rbOrdenarCodigo);
             this.gbOrdenar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbOrdenar.Location = new System.Drawing.Point(462, 12);
+            this.gbOrdenar.Location = new System.Drawing.Point(884, 18);
+            this.gbOrdenar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gbOrdenar.Name = "gbOrdenar";
-            this.gbOrdenar.Size = new System.Drawing.Size(123, 100);
+            this.gbOrdenar.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbOrdenar.Size = new System.Drawing.Size(184, 154);
             this.gbOrdenar.TabIndex = 10;
             this.gbOrdenar.TabStop = false;
             this.gbOrdenar.Text = "Ordenar:";
@@ -74,31 +78,33 @@ namespace SCCI
             // rbOrdenarFecha
             // 
             this.rbOrdenarFecha.AutoSize = true;
-            this.rbOrdenarFecha.Location = new System.Drawing.Point(6, 68);
+            this.rbOrdenarFecha.Location = new System.Drawing.Point(9, 105);
+            this.rbOrdenarFecha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbOrdenarFecha.Name = "rbOrdenarFecha";
-            this.rbOrdenarFecha.Size = new System.Drawing.Size(103, 19);
+            this.rbOrdenarFecha.Size = new System.Drawing.Size(149, 24);
             this.rbOrdenarFecha.TabIndex = 5;
-            this.rbOrdenarFecha.TabStop = true;
             this.rbOrdenarFecha.Text = "Fecha Registro";
             this.rbOrdenarFecha.UseVisualStyleBackColor = true;
             // 
             // rbOrdenarTipoEvaluacion
             // 
             this.rbOrdenarTipoEvaluacion.AutoSize = true;
-            this.rbOrdenarTipoEvaluacion.Location = new System.Drawing.Point(6, 44);
+            this.rbOrdenarTipoEvaluacion.Location = new System.Drawing.Point(9, 68);
+            this.rbOrdenarTipoEvaluacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbOrdenarTipoEvaluacion.Name = "rbOrdenarTipoEvaluacion";
-            this.rbOrdenarTipoEvaluacion.Size = new System.Drawing.Size(109, 19);
+            this.rbOrdenarTipoEvaluacion.Size = new System.Drawing.Size(161, 24);
             this.rbOrdenarTipoEvaluacion.TabIndex = 4;
-            this.rbOrdenarTipoEvaluacion.TabStop = true;
             this.rbOrdenarTipoEvaluacion.Text = "Tipo Evaluacion";
             this.rbOrdenarTipoEvaluacion.UseVisualStyleBackColor = true;
             // 
             // rbOrdenarCodigo
             // 
             this.rbOrdenarCodigo.AutoSize = true;
-            this.rbOrdenarCodigo.Location = new System.Drawing.Point(6, 20);
+            this.rbOrdenarCodigo.Checked = true;
+            this.rbOrdenarCodigo.Location = new System.Drawing.Point(9, 31);
+            this.rbOrdenarCodigo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbOrdenarCodigo.Name = "rbOrdenarCodigo";
-            this.rbOrdenarCodigo.Size = new System.Drawing.Size(62, 19);
+            this.rbOrdenarCodigo.Size = new System.Drawing.Size(91, 24);
             this.rbOrdenarCodigo.TabIndex = 3;
             this.rbOrdenarCodigo.TabStop = true;
             this.rbOrdenarCodigo.Text = "Codigo";
@@ -111,18 +117,21 @@ namespace SCCI
             this.gbBuscar.Controls.Add(this.rbTipoEvaluacion);
             this.gbBuscar.Controls.Add(this.rbCodigo);
             this.gbBuscar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbBuscar.Location = new System.Drawing.Point(12, 12);
+            this.gbBuscar.Location = new System.Drawing.Point(18, 18);
+            this.gbBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gbBuscar.Name = "gbBuscar";
-            this.gbBuscar.Size = new System.Drawing.Size(444, 100);
+            this.gbBuscar.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbBuscar.Size = new System.Drawing.Size(858, 154);
             this.gbBuscar.TabIndex = 9;
             this.gbBuscar.TabStop = false;
             this.gbBuscar.Text = "Buscar:";
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(122, 44);
+            this.txtBuscar.Location = new System.Drawing.Point(235, 67);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(316, 21);
+            this.txtBuscar.Size = new System.Drawing.Size(564, 28);
             this.txtBuscar.TabIndex = 3;
             this.txtBuscar.Tag = "Buscar";
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
@@ -130,31 +139,33 @@ namespace SCCI
             // rbFecha
             // 
             this.rbFecha.AutoSize = true;
-            this.rbFecha.Location = new System.Drawing.Point(7, 68);
+            this.rbFecha.Location = new System.Drawing.Point(10, 105);
+            this.rbFecha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbFecha.Name = "rbFecha";
-            this.rbFecha.Size = new System.Drawing.Size(103, 19);
+            this.rbFecha.Size = new System.Drawing.Size(149, 24);
             this.rbFecha.TabIndex = 2;
-            this.rbFecha.TabStop = true;
             this.rbFecha.Text = "Fecha Registro";
             this.rbFecha.UseVisualStyleBackColor = true;
             // 
             // rbTipoEvaluacion
             // 
             this.rbTipoEvaluacion.AutoSize = true;
-            this.rbTipoEvaluacion.Location = new System.Drawing.Point(7, 44);
+            this.rbTipoEvaluacion.Location = new System.Drawing.Point(10, 68);
+            this.rbTipoEvaluacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbTipoEvaluacion.Name = "rbTipoEvaluacion";
-            this.rbTipoEvaluacion.Size = new System.Drawing.Size(109, 19);
+            this.rbTipoEvaluacion.Size = new System.Drawing.Size(161, 24);
             this.rbTipoEvaluacion.TabIndex = 1;
-            this.rbTipoEvaluacion.TabStop = true;
             this.rbTipoEvaluacion.Text = "Tipo Evaluacion";
             this.rbTipoEvaluacion.UseVisualStyleBackColor = true;
             // 
             // rbCodigo
             // 
             this.rbCodigo.AutoSize = true;
-            this.rbCodigo.Location = new System.Drawing.Point(7, 20);
+            this.rbCodigo.Checked = true;
+            this.rbCodigo.Location = new System.Drawing.Point(10, 31);
+            this.rbCodigo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbCodigo.Name = "rbCodigo";
-            this.rbCodigo.Size = new System.Drawing.Size(62, 19);
+            this.rbCodigo.Size = new System.Drawing.Size(91, 24);
             this.rbCodigo.TabIndex = 0;
             this.rbCodigo.TabStop = true;
             this.rbCodigo.Text = "Codigo";
@@ -165,9 +176,10 @@ namespace SCCI
             this.cmdSalir.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdSalir.Image = global::SCCI.Properties.Resources.Salir32;
             this.cmdSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdSalir.Location = new System.Drawing.Point(515, 254);
+            this.cmdSalir.Location = new System.Drawing.Point(900, 391);
+            this.cmdSalir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmdSalir.Name = "cmdSalir";
-            this.cmdSalir.Size = new System.Drawing.Size(72, 43);
+            this.cmdSalir.Size = new System.Drawing.Size(168, 68);
             this.cmdSalir.TabIndex = 17;
             this.cmdSalir.Text = "Salir";
             this.cmdSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -179,9 +191,10 @@ namespace SCCI
             this.cmdImprimir.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdImprimir.Image = global::SCCI.Properties.Resources.Imprimir;
             this.cmdImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdImprimir.Location = new System.Drawing.Point(403, 254);
+            this.cmdImprimir.Location = new System.Drawing.Point(724, 391);
+            this.cmdImprimir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmdImprimir.Name = "cmdImprimir";
-            this.cmdImprimir.Size = new System.Drawing.Size(106, 43);
+            this.cmdImprimir.Size = new System.Drawing.Size(168, 68);
             this.cmdImprimir.TabIndex = 16;
             this.cmdImprimir.Text = "Imprimir";
             this.cmdImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -193,9 +206,10 @@ namespace SCCI
             this.cmdExportar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdExportar.Image = global::SCCI.Properties.Resources.Exportar_Excel;
             this.cmdExportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdExportar.Location = new System.Drawing.Point(308, 254);
+            this.cmdExportar.Location = new System.Drawing.Point(548, 391);
+            this.cmdExportar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmdExportar.Name = "cmdExportar";
-            this.cmdExportar.Size = new System.Drawing.Size(89, 43);
+            this.cmdExportar.Size = new System.Drawing.Size(168, 68);
             this.cmdExportar.TabIndex = 15;
             this.cmdExportar.Text = "Exportar";
             this.cmdExportar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -207,9 +221,10 @@ namespace SCCI
             this.cmdEliminar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdEliminar.Image = global::SCCI.Properties.Resources.Eliminar;
             this.cmdEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdEliminar.Location = new System.Drawing.Point(213, 254);
+            this.cmdEliminar.Location = new System.Drawing.Point(372, 391);
+            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmdEliminar.Name = "cmdEliminar";
-            this.cmdEliminar.Size = new System.Drawing.Size(89, 43);
+            this.cmdEliminar.Size = new System.Drawing.Size(168, 68);
             this.cmdEliminar.TabIndex = 14;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -221,9 +236,10 @@ namespace SCCI
             this.cmdModificar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdModificar.Image = global::SCCI.Properties.Resources.Modificar;
             this.cmdModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdModificar.Location = new System.Drawing.Point(108, 254);
+            this.cmdModificar.Location = new System.Drawing.Point(196, 391);
+            this.cmdModificar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmdModificar.Name = "cmdModificar";
-            this.cmdModificar.Size = new System.Drawing.Size(99, 43);
+            this.cmdModificar.Size = new System.Drawing.Size(168, 68);
             this.cmdModificar.TabIndex = 13;
             this.cmdModificar.Text = "Modificar";
             this.cmdModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -235,9 +251,10 @@ namespace SCCI
             this.cmdAgregar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdAgregar.Image = global::SCCI.Properties.Resources.Agregar2;
             this.cmdAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdAgregar.Location = new System.Drawing.Point(13, 254);
+            this.cmdAgregar.Location = new System.Drawing.Point(20, 391);
+            this.cmdAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmdAgregar.Name = "cmdAgregar";
-            this.cmdAgregar.Size = new System.Drawing.Size(89, 43);
+            this.cmdAgregar.Size = new System.Drawing.Size(168, 68);
             this.cmdAgregar.TabIndex = 12;
             this.cmdAgregar.Text = "Agregar";
             this.cmdAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -246,10 +263,10 @@ namespace SCCI
             // 
             // Evaluacion_P
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(150)))), ((int)(((byte)(226)))));
-            this.ClientSize = new System.Drawing.Size(597, 305);
+            this.ClientSize = new System.Drawing.Size(1086, 469);
             this.Controls.Add(this.cmdSalir);
             this.Controls.Add(this.cmdImprimir);
             this.Controls.Add(this.cmdExportar);
@@ -259,6 +276,7 @@ namespace SCCI
             this.Controls.Add(this.dgvEvaluacion);
             this.Controls.Add(this.gbOrdenar);
             this.Controls.Add(this.gbBuscar);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Evaluacion_P";
             this.Text = "Evaluacion_P";
             this.Load += new System.EventHandler(this.Evaluacion_P_Load);

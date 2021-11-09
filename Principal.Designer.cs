@@ -380,6 +380,7 @@ namespace SCCI
             this.asignaturasToolStripMenuItem1.Name = "asignaturasToolStripMenuItem1";
             this.asignaturasToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
             this.asignaturasToolStripMenuItem1.Text = "Asignaturas";
+            this.asignaturasToolStripMenuItem1.Click += new System.EventHandler(this.asignaturasToolStripMenuItem1_Click);
             // 
             // notasToolStripMenuItem
             // 
@@ -425,6 +426,7 @@ namespace SCCI
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Principal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -31,14 +31,13 @@ namespace SCCI
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.Nacionalidad = new System.Windows.Forms.RadioButton();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.rbClave = new System.Windows.Forms.RadioButton();
+            this.rbNacionalidad = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.rbOrdenarClave = new System.Windows.Forms.RadioButton();
+            this.rbOrdenarNacionalidad = new System.Windows.Forms.RadioButton();
+            this.gridNacionalidades = new System.Windows.Forms.DataGridView();
             this.cmdSalir = new System.Windows.Forms.Button();
             this.cmdImprimir = new System.Windows.Forms.Button();
             this.cmdExportar = new System.Windows.Forms.Button();
@@ -47,7 +46,7 @@ namespace SCCI
             this.cmdNuevo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridNacionalidades)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -55,213 +54,229 @@ namespace SCCI
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(446, 99);
+            this.label1.Location = new System.Drawing.Point(669, 152);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.Size = new System.Drawing.Size(0, 25);
             this.label1.TabIndex = 0;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.Nacionalidad);
+            this.groupBox1.Controls.Add(this.txtBuscar);
+            this.groupBox1.Controls.Add(this.rbClave);
+            this.groupBox1.Controls.Add(this.rbNacionalidad);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(13, 14);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(434, 139);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(806, 130);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar";
             // 
-            // button1
+            // txtBuscar
             // 
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::SCCI.Properties.Resources.Buscar;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(270, 67);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 40);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Buscar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.txtBuscar.Location = new System.Drawing.Point(246, 51);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(539, 30);
+            this.txtBuscar.TabIndex = 2;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox1
+            // rbClave
             // 
-            this.textBox1.Location = new System.Drawing.Point(133, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(278, 23);
-            this.textBox1.TabIndex = 2;
+            this.rbClave.AutoSize = true;
+            this.rbClave.Checked = true;
+            this.rbClave.Location = new System.Drawing.Point(8, 33);
+            this.rbClave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbClave.Name = "rbClave";
+            this.rbClave.Size = new System.Drawing.Size(93, 29);
+            this.rbClave.TabIndex = 1;
+            this.rbClave.TabStop = true;
+            this.rbClave.Text = "Clave";
+            this.rbClave.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbNacionalidad
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(16, 90);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(159, 21);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Fecha de Registro";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // Nacionalidad
-            // 
-            this.Nacionalidad.AutoSize = true;
-            this.Nacionalidad.Location = new System.Drawing.Point(16, 28);
-            this.Nacionalidad.Name = "Nacionalidad";
-            this.Nacionalidad.Size = new System.Drawing.Size(120, 21);
-            this.Nacionalidad.TabIndex = 0;
-            this.Nacionalidad.TabStop = true;
-            this.Nacionalidad.Text = "Nacionalidad";
-            this.Nacionalidad.UseVisualStyleBackColor = true;
+            this.rbNacionalidad.AutoSize = true;
+            this.rbNacionalidad.Location = new System.Drawing.Point(8, 73);
+            this.rbNacionalidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbNacionalidad.Name = "rbNacionalidad";
+            this.rbNacionalidad.Size = new System.Drawing.Size(162, 29);
+            this.rbNacionalidad.TabIndex = 0;
+            this.rbNacionalidad.Text = "Nacionalidad";
+            this.rbNacionalidad.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Controls.Add(this.radioButton4);
+            this.groupBox2.Controls.Add(this.rbOrdenarClave);
+            this.groupBox2.Controls.Add(this.rbOrdenarNacionalidad);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(465, 12);
+            this.groupBox2.Location = new System.Drawing.Point(827, 14);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(275, 139);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(230, 130);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ordenar";
             // 
-            // radioButton3
+            // rbOrdenarClave
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(16, 90);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(159, 21);
-            this.radioButton3.TabIndex = 1;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Fecha de Registro";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbOrdenarClave.AutoSize = true;
+            this.rbOrdenarClave.Checked = true;
+            this.rbOrdenarClave.Location = new System.Drawing.Point(8, 33);
+            this.rbOrdenarClave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbOrdenarClave.Name = "rbOrdenarClave";
+            this.rbOrdenarClave.Size = new System.Drawing.Size(93, 29);
+            this.rbOrdenarClave.TabIndex = 1;
+            this.rbOrdenarClave.TabStop = true;
+            this.rbOrdenarClave.Text = "Clave";
+            this.rbOrdenarClave.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rbOrdenarNacionalidad
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(16, 28);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(120, 21);
-            this.radioButton4.TabIndex = 0;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Nacionalidad";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rbOrdenarNacionalidad.AutoSize = true;
+            this.rbOrdenarNacionalidad.Location = new System.Drawing.Point(8, 73);
+            this.rbOrdenarNacionalidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbOrdenarNacionalidad.Name = "rbOrdenarNacionalidad";
+            this.rbOrdenarNacionalidad.Size = new System.Drawing.Size(162, 29);
+            this.rbOrdenarNacionalidad.TabIndex = 0;
+            this.rbOrdenarNacionalidad.Text = "Nacionalidad";
+            this.rbOrdenarNacionalidad.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // gridNacionalidades
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 157);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(728, 212);
-            this.dataGridView1.TabIndex = 5;
+            this.gridNacionalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridNacionalidades.Location = new System.Drawing.Point(13, 154);
+            this.gridNacionalidades.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridNacionalidades.Name = "gridNacionalidades";
+            this.gridNacionalidades.RowHeadersWidth = 62;
+            this.gridNacionalidades.Size = new System.Drawing.Size(1044, 326);
+            this.gridNacionalidades.TabIndex = 5;
             // 
             // cmdSalir
             // 
             this.cmdSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdSalir.Image = global::SCCI.Properties.Resources.exit;
             this.cmdSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdSalir.Location = new System.Drawing.Point(613, 385);
+            this.cmdSalir.Location = new System.Drawing.Point(891, 490);
+            this.cmdSalir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmdSalir.Name = "cmdSalir";
-            this.cmdSalir.Size = new System.Drawing.Size(111, 38);
+            this.cmdSalir.Size = new System.Drawing.Size(168, 68);
             this.cmdSalir.TabIndex = 16;
             this.cmdSalir.Text = "Salir";
             this.cmdSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdSalir.UseVisualStyleBackColor = true;
+            this.cmdSalir.Click += new System.EventHandler(this.cmdSalir_Click);
             // 
             // cmdImprimir
             // 
             this.cmdImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdImprimir.Image = global::SCCI.Properties.Resources.Imprimir;
             this.cmdImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdImprimir.Location = new System.Drawing.Point(496, 385);
+            this.cmdImprimir.Location = new System.Drawing.Point(715, 490);
+            this.cmdImprimir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmdImprimir.Name = "cmdImprimir";
-            this.cmdImprimir.Size = new System.Drawing.Size(111, 38);
+            this.cmdImprimir.Size = new System.Drawing.Size(168, 68);
             this.cmdImprimir.TabIndex = 15;
             this.cmdImprimir.Text = "Imprimir";
             this.cmdImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdImprimir.UseVisualStyleBackColor = true;
+            this.cmdImprimir.Click += new System.EventHandler(this.cmdImprimir_Click);
             // 
             // cmdExportar
             // 
             this.cmdExportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdExportar.Image = global::SCCI.Properties.Resources.Exportar_Excel;
             this.cmdExportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdExportar.Location = new System.Drawing.Point(379, 385);
+            this.cmdExportar.Location = new System.Drawing.Point(539, 490);
+            this.cmdExportar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmdExportar.Name = "cmdExportar";
-            this.cmdExportar.Size = new System.Drawing.Size(111, 38);
+            this.cmdExportar.Size = new System.Drawing.Size(168, 68);
             this.cmdExportar.TabIndex = 14;
             this.cmdExportar.Text = "Exportar";
             this.cmdExportar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdExportar.UseVisualStyleBackColor = true;
+            this.cmdExportar.Click += new System.EventHandler(this.cmdExportar_Click);
             // 
             // cmdEliminar
             // 
             this.cmdEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdEliminar.Image = global::SCCI.Properties.Resources.Eliminar;
             this.cmdEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdEliminar.Location = new System.Drawing.Point(262, 385);
+            this.cmdEliminar.Location = new System.Drawing.Point(364, 490);
+            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmdEliminar.Name = "cmdEliminar";
-            this.cmdEliminar.Size = new System.Drawing.Size(111, 38);
+            this.cmdEliminar.Size = new System.Drawing.Size(168, 68);
             this.cmdEliminar.TabIndex = 13;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdEliminar.UseVisualStyleBackColor = true;
+            this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
             // 
             // cmdModificar
             // 
             this.cmdModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdModificar.Image = global::SCCI.Properties.Resources.Modificar;
             this.cmdModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdModificar.Location = new System.Drawing.Point(145, 385);
+            this.cmdModificar.Location = new System.Drawing.Point(189, 490);
+            this.cmdModificar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmdModificar.Name = "cmdModificar";
-            this.cmdModificar.Size = new System.Drawing.Size(111, 38);
+            this.cmdModificar.Size = new System.Drawing.Size(168, 68);
             this.cmdModificar.TabIndex = 12;
             this.cmdModificar.Text = "Modificar";
             this.cmdModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdModificar.UseVisualStyleBackColor = true;
+            this.cmdModificar.Click += new System.EventHandler(this.cmdModificar_Click);
             // 
             // cmdNuevo
             // 
             this.cmdNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdNuevo.Image = global::SCCI.Properties.Resources.Agregar2;
             this.cmdNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdNuevo.Location = new System.Drawing.Point(28, 385);
+            this.cmdNuevo.Location = new System.Drawing.Point(13, 490);
+            this.cmdNuevo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmdNuevo.Name = "cmdNuevo";
-            this.cmdNuevo.Size = new System.Drawing.Size(111, 38);
+            this.cmdNuevo.Size = new System.Drawing.Size(168, 68);
             this.cmdNuevo.TabIndex = 11;
             this.cmdNuevo.Text = "Nuevo";
             this.cmdNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdNuevo.UseVisualStyleBackColor = true;
+            this.cmdNuevo.Click += new System.EventHandler(this.cmdNuevo_Click);
             // 
             // NacionalidadesP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(150)))), ((int)(((byte)(226)))));
-            this.ClientSize = new System.Drawing.Size(752, 435);
+            this.ClientSize = new System.Drawing.Size(1072, 571);
             this.Controls.Add(this.cmdSalir);
             this.Controls.Add(this.cmdImprimir);
             this.Controls.Add(this.cmdExportar);
             this.Controls.Add(this.cmdEliminar);
             this.Controls.Add(this.cmdModificar);
             this.Controls.Add(this.cmdNuevo);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gridNacionalidades);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "NacionalidadesP";
-            this.Text = "NacionalidadesP";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "Nacionalidades";
             this.Load += new System.EventHandler(this.NacionalidadesP_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridNacionalidades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,14 +286,13 @@ namespace SCCI
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton Nacionalidad;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.RadioButton rbClave;
+        private System.Windows.Forms.RadioButton rbNacionalidad;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.RadioButton rbOrdenarClave;
+        private System.Windows.Forms.RadioButton rbOrdenarNacionalidad;
+        private System.Windows.Forms.DataGridView gridNacionalidades;
         private System.Windows.Forms.Button cmdSalir;
         private System.Windows.Forms.Button cmdImprimir;
         private System.Windows.Forms.Button cmdExportar;

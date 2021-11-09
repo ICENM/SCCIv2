@@ -25,13 +25,11 @@ namespace SCCI
             if (Metodos.Control_F == 'A')
             {
                 this.Text = "Evaluacion = Nuevo";
-                txtCodigo.Enabled = true;
             }
 
             if (Metodos.Control_F == 'M')
             {
                 this.Text = "Evaluacion = Actualizar";
-                txtCodigo.Enabled = false;
 
 
                 MySqlDataReader l = Metodos.LectorConsulta(String.Format("SELECT * FROM Evaluacion WHERE Codigo ='{0}'", Metodos.Control_CS));
@@ -43,10 +41,9 @@ namespace SCCI
                     {
                         txtCodigo.Text = l.GetString(0);
                         txtEvaluacion.Text = l.GetString(1);
-                        dtpFechaRegistro.Text = l.GetString(2);
-                        cbActivo.Text = l.GetString(3);
+                        dtpFechaRegistro.Value = l.GetDateTime(2);
+                        cboActivo.Text = l.GetString(3);
                         
-
                     }
                 }
             }
@@ -61,8 +58,8 @@ namespace SCCI
             {
                 new MySqlParameter("@COD",txtCodigo.Text),
                 new MySqlParameter("@TIP", txtEvaluacion.Text),
-                new MySqlParameter("@FECH", dtpFechaRegistro.Text),
-                new MySqlParameter("@ACT", cbActivo.Text),
+                new MySqlParameter("@FECH", dtpFechaRegistro.Value),
+                new MySqlParameter("@ACT", cboActivo.Text),
 
             };
 
@@ -86,7 +83,8 @@ namespace SCCI
 
         private void cmdCancelar_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
+            Metodos.Control_F = ' ';
         }
     }
 }

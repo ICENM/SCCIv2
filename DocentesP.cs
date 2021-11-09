@@ -19,7 +19,7 @@ namespace SCCI
         private void RefrescarDatos()
         {
             Datos.Clear();
-            Datos = Metodos.Mostrar("SELECT * FROM Docentes");
+            Datos = Metodos.Mostrar("SELECT * FROM Docentes WHERE ACTIVO = 'S'");
 
             gridDocentes.DataSource = Datos;
         }
@@ -32,28 +32,6 @@ namespace SCCI
         public DocentesP()
         {
             InitializeComponent();
-        }
-
-        private void cmdBuscar_Click(object sender, EventArgs e)
-        {
-            string F1, F2, SQL;
-
-            F1 = "";
-            F2 = "";
-
-            if (rbDNI.Checked) F1 = "DNI";
-            if (rbNombre.Checked) F1 = "NOMBRES";
-            if (rbDireccion.Checked) F1 = "DIRECCION";
-            if (rbOrdenarDNI.Checked) F2 = "DNI";
-            if (rbOrdenarNombre.Checked) F2 = "NOMBRE";
-            if (rbOrdenarDireccion.Checked) F2 = "DIRECCION";
-
-            SQL = String.Format("SELECT * FROM NotaS WHERE {0} LIKE '%{1}%' ORDER BY {2}", F1, txtBuscar.Text, F2);
-
-            Datos.Clear();
-            Datos = Metodos.Mostrar(SQL);
-
-            gridDocentes.DataSource = Datos;
         }
 
         private void cmdNuevo_Click(object sender, EventArgs e)
@@ -110,6 +88,28 @@ namespace SCCI
         private void DocentesP_Load(object sender, EventArgs e)
         {
             RefrescarDatos();
+        }
+
+        private void cmdEliminar_TextChanged(object sender, EventArgs e)
+        {
+            string F1, F2, SQL;
+
+            F1 = "";
+            F2 = "";
+
+            if (rbDNI.Checked) F1 = "DNI";
+            if (rbNombre.Checked) F1 = "NOMBRES";
+            if (rbDireccion.Checked) F1 = "DIRECCION";
+            if (rbOrdenarDNI.Checked) F2 = "DNI";
+            if (rbOrdenarNombre.Checked) F2 = "NOMBRE";
+            if (rbOrdenarDireccion.Checked) F2 = "DIRECCION";
+
+            SQL = String.Format("SELECT * FROM Docentes WHERE {0} LIKE '%{1}%' ORDER BY {2}", F1, txtBuscar.Text, F2);
+
+            Datos.Clear();
+            Datos = Metodos.Mostrar(SQL);
+
+            gridDocentes.DataSource = Datos;
         }
     }
 }
