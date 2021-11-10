@@ -172,7 +172,7 @@ namespace SCCI
             this.cmdSalir.Text = "Salir";
             this.cmdSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdSalir.UseVisualStyleBackColor = true;
-            this.cmdSalir.Click += new System.EventHandler(this.cmdSalir_Click);
+            //this.cmdSalir.Click += new System.EventHandler(this.cmdSalir_Click);
             // 
             // cmdImprimir
             // 
@@ -186,7 +186,7 @@ namespace SCCI
             this.cmdImprimir.Text = "Imprimir";
             this.cmdImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdImprimir.UseVisualStyleBackColor = true;
-            this.cmdImprimir.Click += new System.EventHandler(this.cmdImprimir_Click);
+            //this.cmdImprimir.Click += new System.EventHandler(this.cmdImprimir_Click);
             // 
             // cmdExportar
             // 
@@ -200,7 +200,7 @@ namespace SCCI
             this.cmdExportar.Text = "Exportar";
             this.cmdExportar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdExportar.UseVisualStyleBackColor = true;
-            this.cmdExportar.Click += new System.EventHandler(this.cmdExportar_Click);
+            //this.cmdExportar.Click += new System.EventHandler(this.cmdExportar_Click);
             // 
             // cmdEliminar
             // 
@@ -214,7 +214,7 @@ namespace SCCI
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdEliminar.UseVisualStyleBackColor = true;
-            this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
+            //this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
             // 
             // cmdModificar
             // 

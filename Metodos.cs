@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using System.Data;
+using System.Drawing;
+using System.IO;
 
 namespace SCCI
 {
@@ -333,5 +335,48 @@ namespace SCCI
             }
         }
 
+        // Metodo para Convertir Imagen a Binario
+        public static byte[] Imagen_Bytes(Image Imagen)
+        {
+            // Si hay imagen
+            if (!(Imagen == null))
+            {
+                // Variable de datos binarios en stream (flujo)
+                MemoryStream Bin = new MemoryStream();
+
+                // Convertir a bytes
+                Imagen.Save(Bin, System.Drawing.Imaging.ImageFormat.Png);
+
+                // Retorna Binario
+                return Bin.GetBuffer();
+            }
+            else
+                return null;
+        }
+
+        // Metodo para COnvertir Binario a Imagen
+        public static Image Bytes_Imagen(byte[] Imagen)
+        {
+            try
+            {
+                // Si hay imagen
+                if (!(Imagen == null))
+                {
+                    // Capturar array con memorystream hacia Bin
+                    MemoryStream Bin = new MemoryStream(Imagen);
+
+                    // Con el metodo FromStream de Image obtenemos la imagen
+                    Image Resultado = Image.FromStream(Bin);
+
+                    // Y la retornamos
+                    return Resultado;
+                }
+                else
+                    return null;
+            }catch (Exception ex)
+            {
+                return null;
+            }
+        }
     }
 }

@@ -47,10 +47,10 @@ namespace SCCI
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox3);
+            //this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtClave);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
@@ -108,10 +108,10 @@ namespace SCCI
             // 
             // txtClave
             // 
-            this.textBox1.Location = new System.Drawing.Point(60, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(134, 23);
-            this.textBox1.TabIndex = 1;
+            this.txtClave.Location = new System.Drawing.Point(60, 29);
+            this.txtClave.Name = "textBox1";
+            this.txtClave.Size = new System.Drawing.Size(134, 23);
+            this.txtClave.TabIndex = 1;
             // 
             // label1
             // 
